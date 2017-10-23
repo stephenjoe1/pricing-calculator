@@ -1,0 +1,7 @@
+---
+applications:
+- name: paas-test
+  command: npm start
+  memory: 512M
+  buildpack: nodejs_buildpack
+  instances: 1

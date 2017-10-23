@@ -1,0 +1,358 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.cancel-link {
+  margin-top: 20px;
+}
+
+.product-name {
+  font-weight: 400;
+  padding-left: 5px;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: -15px;
+}
+
+.link-back {
+  margin-top: 5px!important;
+}
+
+.product-name a {
+  color: white;
+ text-decoration: none;
+}
+
+.product-name a:hover {
+ text-decoration: underline;
+}
+
+#global-header.with-proposition .header-wrapper .header-global .header-logo {
+  display: inline-block;
+    width: 190px;
+}
+
+
+#global-header .full-width,
+#global-header-bar.full-width{
+  max-width: 100%;
+}
+
+#global-header .header-proposition #proposition-links.right-aligned {
+  li{
+    float: right;
+      padding: 0 0 0 15px;
+  }
+}
+
+
+#global-header-bar {
+  max-width: 960px;
+}
+
+#global-header .header-wrapper {
+  max-width: 990px;
+}
+
+.header-sign-out {
+  color: white;
+}
+
+.bottom-space {
+  margin-bottom: 30px;
+}
+
+.review-section {
+  border: 1px solid gray;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 45px;
+}
+
+.multiple-quantity-checkbox {
+  margin-top: 15px;
+  display: block;
+}
+
+.link-approval {
+  font-weight: 700;
+  background-color: #fff;
+  border: none;
+}
+
+.currency-input {
+  &__inner {
+    position: relative;
+
+    &__unit {
+      position: absolute;
+      bottom: -34px;
+      left: $gutter / 3;
+      font-weight: bold;
+    }
+  }
+
+  .form-control {
+    padding: 6px 0 3px 25px;
+  }
+}
+
+
+.form-group-inline {
+  float: left;
+  display: inline;
+}
+
+.heading-environment {
+  border-bottom: 5px solid #0B0C0C;
+}
+
+.form-hint-2 {
+  font-size: 16px;
+  display: block;
+  color: #6F777B;
+  font-weight: 400;
+}
+
+
+.wide-th {
+  width: 400px;
+}
+
+.small-tr {
+  font-size: 16px;
+  border-bottom: 0px solid #fff;
+}
+
+table th {
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 0px solid #fff;
+
+}
+
+table td {
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 0px solid #fff;
+}
+
+#more_fields {
+  margin-top: -5px;
+  background-color: #fff;
+  border-color: #fff;
+  border-right: 0px solid #fff;
+  border-bottom: 0px solid #fff;
+  color: #005EA5;
+  padding-left: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+.add-env-link {
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.dividing-line {
+  border-top: 5px solid black;
+  padding-top: 15px;
+}
+
+.list-space{
+  margin-top:45px;
+  margin-bottom: 45px;
+
+}
+
+
+// sticky
+
+.payment-summary-small {
+  border: 10px solid #DEE0E2;
+  background-color: #F8F8F8;
+  padding: 15px;
+  margin-top: 75px;
+}
+
+
+.payment-summary-small h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.payment-summary-small h3 {
+  font-size: 16px;
+}
+
+.payment-info {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.payment-amount {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.sticky {
+    position: fixed;
+    width: 250px;
+    // width: 33%;
+    // left: 0;
+    top: 0;
+    z-index: 100;
+    margin-top: 30px;
+}
+
+//end-sticky
+
+//accordion
+
+.app-c-accordion {
+  &.app-c-accordion--active {
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $border-colour;
+  }
+}
+
+.app-c-accordion__header {
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+
+  .app-c-accordion--active & {
+    border-top: 1px solid $border-colour;
+    cursor: pointer;
+
+    &:hover {
+      background: $grey-3;
+    }
+  }
+}
+
+.app-c-accordion__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+  background-image: image-url('icons-plus-minus.png'); // PNG fallback for SVG
+  background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+
+  @include media (tablet) {
+    right: 15px;
+  }
+
+  .section-is-open & {
+    background-position: 0 0;
+  }
+}
+
+.app-c-accordion__title {
+  @include bold-24;
+}
+
+// removes extra dotted outline from buttons in Firefox
+// on focus (standard yellow outline unaffected)
+@mixin firefox-remove-second-button-outline {
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+.app-c-accordion__description {
+  @include core-19;
+
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-right: $gutter * 1.5;
+}
+
+.app-c-accordion__panel {
+  padding-top: 5px;
+  padding-bottom: $gutter-half;
+
+  .section-is-open & {
+    @include media(tablet) {
+      padding-top: 10px;
+      padding-bottom: $gutter;
+    }
+  }
+}
+
+.app-c-accordion__button {
+  @include firefox-remove-second-button-outline;
+
+  color: $link-colour;
+  cursor: pointer;
+  background: none;
+  border: 0;
+
+  &--title {
+    @include bold-24;
+
+    display: inline-block;
+    margin-right: $gutter * 1.5;
+    padding: 0;
+    text-align: left;
+  }
+
+  &--controls {
+    @include core-16;
+
+    float: right;
+    position: relative;
+    z-index: 1; // this and relative position stops focus outline underlap with border of accordion
+    padding: 0.5em 0;
+  }
+}
+
+.app-c-accordion__controls {
+  @extend %contain-floats;
+}
+
+
+
