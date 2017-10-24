@@ -277,8 +277,8 @@ table td {
   height: 16px;
   width: 16px;
   margin-top: -8px;
-  background-image: image-url('icons-plus-minus.png'); // PNG fallback for SVG
-  background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
+  background-image: image-url('/public/images/icons-plus-minus.png'); // PNG fallback for SVG
+  background: image-url("/public/images/icons-plus-minus.svg"), linear-gradient(transparent, transparent); // SVG sprite
   background-repeat: no-repeat;
   background-position: 0 -16px;
 
