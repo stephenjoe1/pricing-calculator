@@ -1,6 +1,5 @@
 // Most of this is taken from the service manual
 
-
 window.GOVUK.Modules = window.GOVUK.Modules || {};
 
 (function (Modules) {
@@ -115,7 +114,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function getActiveAnchor() {
-        return GOVUK.getCurrentLocation().hash;
+        return window.location.hash;
       }
 
       function addButtonstoSections() {
@@ -269,11 +268,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     // Sets the hash for the page. If a falsy value is provided, the hash is cleared.
     function setHash(hash) {
-      if (!GOVUK.support.history()) {
-        return;
-      }
 
-      var newLocation = hash || GOVUK.getCurrentLocation().pathname;
+      var newLocation = hash || window.location.pathname;
       history.replaceState({}, '', newLocation);
     }
 

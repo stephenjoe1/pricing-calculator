@@ -19,14 +19,21 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       
-            <h2 class="heading-medium heading-environment">Environment 1</h2>
-            <!-- <p>You can have multiple environments</p> -->
+  <h2 class="heading-medium heading-environment">Environment 1</h2>
+              
+  <div data-module="accordion" class="app-c-accordion js-hidden">
       
+  
 
-      <h3 class="heading-medium">Calculate memory usage</h3>
+  <div class="app-c-accordion__section js-section" id="general-information-and-guidance" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Memory usage
+          </h2>
+        </div>
 
-        <div id="room_fileds">
-           <div>
+    <div class="app-c-accordion__panel js-panel" id="section-panel-general-information-and-guidance-1">
+          <div id="room_fileds">
            <div class=‘label’> </div>
               <table>
                   <thead>
@@ -45,12 +52,10 @@
                     
                   </tbody>
               </table>
-              </div>
-        </div>
-        <div class="general-content-wrapper">
-        <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
+              <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
+          </div>
                 
-
+         <div style="overflow: hidden">
                 <form>
                   <div class="form-group">
                     <fieldset class="inline">
@@ -73,7 +78,9 @@
                     </fieldset>
                   </div>
                 </form>
-                <div class="form-group">
+
+
+              <div class="form-group">
                     <label class="form-label-bold" for="payment-title">
                       How many deploys per week?
                       <span class="form-hint-2">
@@ -81,14 +88,23 @@
                       </span>
                       </label>
                       <input name="payment-title" type="text" class="form-control" id="payment-title"
-                                   style="width: 30%;" value="{{ data['payment-title'] }}">
-                  </div>
-          </div>
+                      style="width: 30%;" value="{{ data['payment-title'] }}">
+              </div>
+            </div>
+        </div>
+    </div>
 
+      
+      <div class="app-c-accordion__section js-section" id="alternative-provision-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Relational databases: Postgres/MySQL
+          </h2>
+        </div>
 
-                  <form>
+        <div class="app-c-accordion__panel js-panel" id="section-panel-alternative-provision-censuses-2">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Relational databases: Postgres/MySQL</h3>
                       <fieldset>
 
                         <legend>
@@ -144,13 +160,20 @@
                     <p><a href="">Add another relational database</a></p>
 
                   </form>
+        </div>
+      </div>
+      
 
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Document databases: Mongo Cluster
+          </h2>
+        </div>
 
-
-
-                  <form>
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Document databases: Mongo Cluster</h3>
                       <fieldset>
 
                         <legend>
@@ -193,11 +216,19 @@
                       <p><a href="">Add another document database</a></p>
 
                   </form>
+        </div>
+      </div>
 
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Search: Elasticsearch
+          </h2>
+        </div>
 
-                  <form>
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Search: Elasticsearch</h3>
                       <fieldset>
 
                         <legend>
@@ -227,14 +258,20 @@
                     </div>
                       <p><a href="">Add another Elasticsearch</a></p>
                   </form>
+        </div>
+      </div>
 
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Key/Value store: Redis
+          </h2>
+        </div>
 
-
-                  <form>
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Key/Value store: Redis</h3>
                       <fieldset>
-
                         <legend>
                           <h4 class="heading-small">Choose a plan</h4>
                         </legend>
@@ -280,12 +317,21 @@
                     </div>
                    <p><a href="">Add another key/value store</a></p>
                   </form>
+        </div>
+      </div>
 
 
 
-                  <form>
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Message queue: RabbitMQ
+          </h2>
+        </div>
+
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Message queue: RabbitMQ</h3>
                       <fieldset>
 
                         <legend>
@@ -315,9 +361,20 @@
                   <p><a href="">Add another message queue</a></p>
                   </form>
 
-                  <form>
+        </div>
+      </div>
+
+
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Logging: Logit instance
+          </h2>
+        </div>
+
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+          <form>
                     <div class="form-group">
-                    <h3 class="heading-medium">Logging: Logit instance</h3>
                       <fieldset>
 
                         <legend>
@@ -354,10 +411,19 @@
                    <p><a href="">Add another logit instance</a></p>
                   </form>
 
+        </div>
+      </div>
 
-      <h2 class="heading-medium heading-environment">Support plans</h2>
 
-                  <form>
+      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+        <div class="app-c-accordion__header js-toggle-panel">
+          <h2 class="app-c-accordion__title js-section-title">
+            Support plans
+          </h2>
+        </div>
+
+        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+           <form>
                     <div class="form-group">
                     <!--<h3 class="heading-medium">Choose a support plan</h3>-->                      
                       <fieldset>
@@ -405,6 +471,36 @@
                       Support costs are only added once. If you add other environments support costs will remain the same.
                     </p>
                   </div>
+
+        </div>
+      </div>
+
+
+  
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                   <ul class="list list-space">
                     <li><a href="#">Add another environment with the same specifications</a></li>
