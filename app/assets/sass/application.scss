@@ -89,6 +89,16 @@ $path: "/public/images/";
   color: white;
 }
 
+#global-header.with-proposition .header-wrapper .header-global {
+    float: left;
+    width: 45%;
+}
+
+#global-header.with-proposition .header-wrapper .header-proposition {
+    width: 55%;
+    float: right;
+}
+
 .bottom-space {
   margin-bottom: 30px;
 }
@@ -149,7 +159,7 @@ $path: "/public/images/";
 
 
 .wide-th {
-  width: 400px;
+  width: 420px;
 }
 
 .small-tr {
@@ -170,6 +180,8 @@ table td {
     border-bottom: 0px solid #fff;
 }
 
+
+
 #more_fields {
   margin-top: -5px;
   background-color: #fff;
@@ -180,6 +192,26 @@ table td {
   padding-left: 0px;
   text-decoration: underline;
   cursor: pointer;
+}
+
+
+.back {
+  margin-top: 15px;
+  // margin-bottom: 30px;
+}
+
+.back a {
+  margin-top: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link-back {
+  margin-bottom: 0px;
+  margin-top: 5px !important;
+  border-bottom: none;
+  color: #0076c0;
 }
 
 
@@ -200,6 +232,82 @@ table td {
   margin-bottom: 45px;
 
 }
+
+// team members
+
+.manage-team-action {
+  border-right: 1px solid #BFC1C3;
+}
+
+.team-active {
+  margin-top: 0px;
+}
+
+.team-invited {
+  padding-left: 0;
+}
+
+.member-email {
+  margin-top: -15px;
+  margin-bottom: 30px
+}
+
+.member-table {
+  margin-top: 10px;
+}
+
+.member-name {
+  float: left;
+  margin-top: 5px;
+}
+
+.invite-button {
+  margin-top: 20px;
+  float: right;
+  margin-right: 0px;
+}
+
+
+.permission-list {
+  color: $secondary-text-colour;
+}
+
+.permission-main-type {
+  font-weight: 700;
+}
+
+.edit-permissions {
+  font-weight: 700;
+}
+
+tr.clickable-row {
+  cursor: pointer;
+}
+
+tr.clickable-row:hover {
+  background-color: #F8F8F8;
+}
+
+.permission-list-profile {
+  display: list-item;
+  list-style: none;
+}
+
+.staff-subheading {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.staff-subheading-2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.permissions-type {
+  font-weight: 700;
+}
+
+//team members end
 
 
 // sticky
@@ -227,11 +335,22 @@ table td {
   font-size: 16px;
 }
 
+.heading-hint {
+  font-weight: 400;
+}
+
 .payment-amount {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.payment-amount-pm {
+  font-size: 16px;
+  margin-top: -5px;
+  padding-top: 0px;
+  display: block;
 }
 
 .sticky {
@@ -245,6 +364,60 @@ table td {
 }
 
 //end-sticky
+
+//box highlight
+
+.govuk-box-highlight-green {
+  margin: 2em 0 0 0;
+  padding: 1em;
+  color: $green;
+  background: none;
+  text-align: centre;
+  border: 5px $green solid;
+}
+
+.govuk-box-highlight-green p {
+  font-weight: 700;
+  margin-bottom: .5em;
+  padding-top: 10px;
+  color: $text-colour;
+}
+
+//box hightlight 2
+
+.intro-block-small {
+  //background-color: #DEE0E2;
+  border: 2px solid #6F777B;
+  padding: 1px 15px 15px 15px;
+  height: auto;
+  font-size: 16px;
+  margin-bottom: 20px;
+  height: 155px;
+}
+
+.intro-block-small h2{
+  text-decoration: none;
+  color: #0B0C0C;
+}
+
+.intro-block-small h3{
+  margin-top: 10px;
+}
+
+
+.intro-block-small p{
+  color: #0B0C0C;
+}
+
+.intro-block-small li{
+  display: inline;
+  margin-right: 5px;
+}
+
+.intro-block-small a:visited{
+  color: #005EA5;
+}
+
 
 //accordion
 

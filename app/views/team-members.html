@@ -1,0 +1,86 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+ 
+    <div class="column-two-thirds">
+
+    <div class="back">
+			<a href="/dashboard" class="link-back">Back to dashboard</a>
+	</div>
+
+      <h1 class="heading-large"><span class="heading-secondary">Organisation</span>
+            GDS-Design</h1>
+    </div>
+  </div>
+	
+	<div class="grid-row">
+		<div class="column-one-third">
+
+			<h2 class="heading-medium">Team members</h2>
+		  		<h2 class="heading-medium staff-subheading">
+					Active (7)
+				</h2>
+		</div>
+		<div class="column-one-third">
+				<a href="/invite-team-members">
+					<input class="button invite-button" type="submit" value="Invite a team member">
+				</a>
+		</div>
+	</div>
+
+		<div>
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers (2)</td>
+		      		</tr>
+			      	<tr class='clickable-row' data-href='team-member-me'>
+			      		<td>John Smith (you)</td>
+			      	</tr>
+			      	<tr>
+			      		<td>Lois Gonzalez</td>
+			      	</tr>
+				</tbody>
+			</table>
+			
+			<table>
+				<tbody>	
+		      		<tr>
+		      			<td class="permissions-type">Space developers (5)</td>
+		      		</tr>
+			      	<tr>
+			      		<td>Alison Wilson</td>
+			      	</tr>
+			      	<tr>
+			      		<td>Richard Pardy</td>
+			      	</tr>
+			      	<tr>
+			      		<td>Maria O'Toole</td>
+			      	</tr>
+			      	<tr>
+			      		<td>Martin Lynch</td>
+			      	</tr>
+			      	<tr>
+			      		<td>Trina Nunez</td>
+			      	</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
+
+</main>
+
+
+
+{% endblock %}

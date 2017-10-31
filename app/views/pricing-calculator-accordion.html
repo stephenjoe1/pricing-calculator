@@ -19,7 +19,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       
-  <h2 class="heading-medium heading-environment">Environment 1</h2>
+  <h2 class="heading-medium heading-environment">Environment 1 <span class="heading-hint">(e.g. Production)</span></h2>
               
   
 
@@ -30,26 +30,37 @@
   <div class="app-c-accordion__section js-section" id="general-information-and-guidance" data-track-count="accordionSection">
         <div class="app-c-accordion__header js-toggle-panel">
           <h2 class="app-c-accordion__title js-section-title">
-            Memory usage
+            Calculate memory usage
           </h2>
         </div>
 
     <div class="app-c-accordion__panel js-panel" id="section-panel-general-information-and-guidance-1">
           <div id="room_fileds">
-           <div class=‘label’> </div>
+           <div class=‘label’> 
+
+              <details>
+                  <summary><span class="summary">How memory cost is calculated?</span></summary>
+                  <div class="panel panel-border-narrow">
+                    <p class="font-xsmall">
+                      Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
+                    </p>
+                  </div>
+                </details>
+
+           </div>
               <table>
                   <thead>
                     <tr>
                       <th class="wide-th small-tr" scope="col">App description</th>
-                      <th class="small-tr"scope="col">Memory GB</th>
+                      <th class="small-tr"scope="col">Memory (GB)</th>
                       <th class="small-tr"scope="col">Instances</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 360px;" value="{{ data['payment-title'] }}"></th>
-                      <td ><input name="form-control-1-2" type="text" class="form-control form-control-1-2" id="form-control-1-2" value="{{ data['payment-title'] }}"></td>
-                      <td ><input name="form-control-1-2" type="text" class="form-control form-control-1-2" id="form-control-1-2" value="{{ data['payment-title'] }}"></td>
+                      <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
+                      <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                      <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
                     </tr>
                     
                   </tbody>
@@ -414,22 +425,24 @@
                   </form>
 
         </div>
+
+      </div>
       </div>
 
+      <ul class="list list-space">
+                    <li><a href="#">Add another environment with the same specifications</a></li>
+                    <li><a href="#">Add another environment with different specifications</a></li>
+                  </ul>
 
 
-
-  
-  </div>
-
-  <h2 class="heading-medium heading-environment">Support plan</h2>
+  <h2 class="heading-medium heading-environment">Support plans</h2>
 
 
 <div data-module="accordion" class="app-c-accordion js-hidden">
 <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
         <div class="app-c-accordion__header js-toggle-panel">
           <h2 class="app-c-accordion__title js-section-title">
-            Support plan options
+            Development and service team support options
           </h2>
         </div>
 
@@ -445,31 +458,19 @@
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
                           <label class="font-xsmall" for="radio-1">Trial<span class="form-hint-2">
-                            Up to ten support tickets during onboarding, dealt with as best endeavours (normal response within 24h)</span>
+                            Up to ten developer support tickets during onboarding, dealt with as best endeavours (normal response within 24h).</span>
                           </label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Bronze<span class="form-hint-2">
-                            Support tickets prioritised above trial users. No ticket limit. Can raise P1 incidents during office hours.</span>
+                          <label class="font-xsmall" for="radio-1">9 to 5<span class="form-hint-2">
+                            Platform support tickets for teams in development and production. Can raise P1 incidents during office hours.</span>
                           </label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Silver<span class="form-hint-2">
-                            Support tickets prioritised above bronze users. No ticket limit. Can raise P1 incidents 24/7. Can pentest on platform.</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Gold<span class="form-hint-2">
-                            Top priority support tickets. No ticket limit. P1 incidents 24/7. Up to 2d consultancy from PaaS tech lead during onboarding, and quarterly 2h surgery calls with our technical architect.</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Platinum<span class="form-hint-2">
-                            Continuous service and product development requiring focused support from multiple team members. Contact us to discuss your requirements.</span>
+                          <label class="font-xsmall" for="radio-1">24/7<span class="form-hint-2">
+                            Incident support 24/7 per SLAs. Platform support for teams via email 9-5.</span>
                           </label>
                         </div>
 
@@ -488,11 +489,6 @@
 </div>
 
 
-                  <ul class="list list-space">
-                    <li><a href="#">Add another environment with the same specifications</a></li>
-                    <li><a href="#">Add another environment with different specifications</a></li>
-                  </ul>
-
 
           <div class="form-group dividing-line">
             <input class="button" type="submit" value="Save cost estimate as PDF">
@@ -507,12 +503,31 @@
     <div class="column-third">
 
             <div class="payment-summary-small">
-                <h2>Cost summary</h2>
+                <h2>Estimated cost summary</h2>
 
-                  <p class="payment-info">Estimated cost for Environment 1: £1,230.00</p>
-                  <p class="payment-info">Estimated cost for support: £600.00</p>
-                   <h3>Total estimated monthly cost:</h3>
-                   <p class="payment-amount">£1,830.00</p>
+
+              <table>
+                  <tbody>
+                    <tr>
+                      <td class="font-xsmall">Environment 1:</td>
+                      <td class="font-xsmall">£1,230.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-xsmall">Environment 2:</td>
+                      <td class="font-xsmall">£910.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-xsmall">Environment 3:</td>
+                      <td class="font-xsmall">£910.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-xsmall">Support:</td>
+                      <td class="font-xsmall">£600.00</td>
+                    </tr>
+                  </tbody>
+              </table>
+                   <h3>Total estimated cost:</h3>
+                   <p class="payment-amount">£3,650.00 <span class="payment-amount-pm">per month</span></p>
             </div>
         </div>
 
