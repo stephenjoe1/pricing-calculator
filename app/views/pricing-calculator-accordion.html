@@ -12,7 +12,8 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1 class="heading-large">Cost calculator</h1>
-      <p class="lede">Estimate your monthly GOV.UK PaaS costs</p>
+      <p>Estimate your monthly GOV.UK PaaS costs.</p> 
+      <p>Service teams usually run 3 environments, such as: Production, Integration and Staging.</p>
     </div>
   </div>
 
@@ -38,15 +39,6 @@
           <div id="room_fileds">
            <div class=‘label’> 
 
-              <details>
-                  <summary><span class="summary">How memory cost is calculated?</span></summary>
-                  <div class="panel panel-border-narrow">
-                    <p class="font-xsmall">
-                      Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
-                    </p>
-                  </div>
-                </details>
-
            </div>
               <table>
                   <thead>
@@ -68,8 +60,8 @@
               <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
           </div>
                 
-         <div style="overflow: hidden">
-                <form>
+         <div style="margin-top:30px;">
+               <!--  <form>
                   <div class="form-group">
                     <fieldset class="inline">
 
@@ -90,20 +82,29 @@
 
                     </fieldset>
                   </div>
-                </form>
-
+                </form> -->
 
               <div class="form-group">
-                    <label class="form-label-bold" for="payment-title">
-                      How many deploys per week?
+                    <label class="form-label" for="payment-title">
+                      Zero-downtime deploys (per week)
                       <span class="form-hint-2">
-                       Estimated additional cost based on 1.5h average window for app changeover
+                      If needed, estimate how many deploys per week.<br>
+                      Estimated additional cost based on 1.5h average window for app changeover.
                       </span>
                       </label>
                       <input name="payment-title" type="text" class="form-control" id="payment-title"
                       style="width: 30%;" value="{{ data['payment-title'] }}">
               </div>
             </div>
+
+                <details style="margin-bottom:10px;">
+                  <summary><span class="summary font-xsmall">How memory cost is calculated?</span></summary>
+                  <div class="panel panel-border-narrow">
+                    <p class="font-xsmall">
+                      Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
+                    </p>
+                  </div>
+                </details>
         </div>
     </div>
 
@@ -126,44 +127,72 @@
 
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">S-dedicated-9.5<span class="form-hint-2">
-                            Low network performance, 1 vCPU 1GB RAM
+                          <label class="font-xsmall" for="radio-1">light-20GB-relational<span class="form-hint-2">
+                            20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM
                             </span></label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">S-HA-dedicated-9.5<span class="form-hint-2">
-                            Low network performance, 1 vCPU 1GB RAM, hot standby
+                          <label class="font-xsmall" for="radio-1">light-20GB-HA-relational<span class="form-hint-2">
+                            20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM, hot standby
                             </span></label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">M-dedicated-9.5<span class="form-hint-2">
-                            Moderate network performance, 2 vCPU, 8GB RAM, PIOPS-optimised
+                          <label class="font-xsmall" for="radio-1">medium-100GB-relational<span class="form-hint-2">
+                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised
                             </span></label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">M-HA-enc-dedicated-9.5<span class="form-hint-2">
-                            Moderate network performance, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby, encrypted
+                          <label class="font-xsmall" for="radio-1">medium-100GB-HA-relational<span class="form-hint-2">
+                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby
                             </span></label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">L-dedicated-9.5<span class="form-hint-2">
-                            High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised.
+                          <label class="font-xsmall" for="radio-1">medium-100GB-HA-encrypted relational<span class="form-hint-2">
+                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby, encrypted
                             </span></label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">L-HA-dedicated-9.5<span class="form-hint-2">
-                            High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby</span>
+                          <label class="font-xsmall" for="radio-1">heavy-512GB-relational<span class="form-hint-2">
+                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised.</span>
                           </label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">L-HA-enc-dedicated-9.5<span class="form-hint-2">
-                            High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby, encrypted
+                          <label class="font-xsmall" for="radio-1">heavy-512GB-relational-HA<span class="form-hint-2">
+                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby
+                          </span>
+                          </label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                          <label class="font-xsmall" for="radio-1">heavy-512GB-HA-encrypted<span class="form-hint-2">
+                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby, encrypted
+                          </span>
+                          </label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                          <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational<span class="form-hint-2">
+                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised.
+                          </span>
+                          </label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                          <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational-HA<span class="form-hint-2">
+                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby
+                          </span>
+                          </label>
+                        </div>
+                        <div class="multiple-choice">
+                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                          <label class="font-xsmall" for="radio-1">ultraheavy-2TBB-HA-encrypted<span class="form-hint-2">
+                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby, encrypted
                           </span>
                           </label>
                         </div>
@@ -396,30 +425,39 @@
 
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">logit_tiny<span class="form-hint-2">
-                            0.5GB/d 4d retention</span>
+                          <label class="font-xsmall" for="radio-1">Basic<span class="form-hint-2">
+                            Single managed ELK stack, Email login, 24/7 monitoring, Alerting, Versioned configuration, Stack version management, Email support</span>
                           </label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">logit_small<span class="form-hint-2">
-                            1GB/d 7d retention</span>
+                          <label class="font-xsmall" for="radio-1">Pro<span class="form-hint-2">
+                            High availability managed ELK stack with autoscaling and overage protection. Unlimited stacks and users. Single sign-on (SSO) using LDAP, AD & SAML. 2FA. RBAC. Prioritised email support and livechat.</span>
                           </label>
                         </div>
                         <div class="multiple-choice">
                           <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">logit_medium<span class="form-hint-2">
-                            3GB/d 14d</span>
+                          <label class="font-xsmall" for="radio-1">Enterprise(SLA-99.9%)<span class="form-hint-2">
+                            As Pro, but with SLAs and 99.99% availability. Only available once PaaS combined monthly bill > 10K/month</span>
                           </label>
                         </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">logit_large<span class="form-hint-2">
-                            5GB/d 21d</span>
-                          </label>
-                        </div>
-
                       </fieldset>
+                      <table>
+                          <thead>
+                            <tr>
+                              <th class="small-tr" scope="col">GB/day</th>
+                              <th class="small-tr" scope="col">Retention/days</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                            </tr>
+                            
+                          </tbody>
+                      </table>
+
                     </div>
                    <p><a href="">Add another logit instance</a></p>
                   </form>
@@ -480,7 +518,7 @@
 
                    <div class="panel panel-border-wide">
                     <p>
-                      Support costs are only added once. If you add other environments support costs will remain the same.
+                      <a href="">Read more about SLAs.</a>
                     </p>
                   </div>
 
@@ -491,7 +529,7 @@
 
 
           <div class="form-group dividing-line">
-            <input class="button" type="submit" value="Save cost estimate as PDF">
+            <input style="margin-top:30px;" class="button" type="submit" value="Save cost estimate as PDF">
             <p class="cancel-link"><a href="/set-up-payment">Refresh calculator</a></p>
 
         </div>
@@ -532,7 +570,7 @@
                   <summary><span class="summary font-xsmall">Why this cost might vary</span></summary>
                   <div class="panel panel-border-narrow">
                     <p class="font-xsmall">
-                      Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
+                      This cost may vary due to a number of factors such as service usuage etc.
                     </p>
                   </div>
                 </details>
