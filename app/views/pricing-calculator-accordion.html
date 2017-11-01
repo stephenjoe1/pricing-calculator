@@ -415,7 +415,23 @@
 
         <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
           <form>
-                    <div class="form-group">
+                    <div class="form-group table-memory-usage">
+
+                    <table>
+                          <thead>
+                            <tr>
+                              <th class="small-tr" scope="col">How many GB per day?</th>
+                              <th class="small-tr" scope="col">How many retention days?</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                            </tr>
+                            
+                          </tbody>
+                      </table>
                       <fieldset>
 
                         <legend>
@@ -441,21 +457,6 @@
                           </label>
                         </div>
                       </fieldset>
-                      <table>
-                          <thead>
-                            <tr>
-                              <th class="small-tr" scope="col">GB/day</th>
-                              <th class="small-tr" scope="col">Retention/days</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                            </tr>
-                            
-                          </tbody>
-                      </table>
 
                     </div>
                    <p><a href="">Add another logit instance</a></p>
