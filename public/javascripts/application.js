@@ -29,26 +29,20 @@ function add_fields() {
     var objTo = document.getElementById('room_fileds')
     var divtest = document.createElement("div");
     divtest.innerHTML = '<div class="label visually-hidden">Room ' + room +':</div><div><table><thead><tr><th class="wide-th small-tr" scope="col"></th><th class="small-tr"scope="col"></th><th class="small-tr"scope="col"></th></tr></thead><tbody><tr><th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 360px;" value=""></th><td ><input name="form-control-1-2" type="text" class="form-control form-control-1-2" id="form-control-1-2" value=""></td><td ><input name="form-control-1-2" type="text" class="form-control form-control-1-2" id="form-control-1-2" value=""></td> </tr></tbody></table></div>';
-    
     objTo.appendChild(divtest)
 }
 
-
 $(document).ready(function() {
   var stickyNavTop = $('.payment-summary-small').offset().top;
-   
   var stickyNav = function(){
   var scrollTop = $(window).scrollTop();
-        
   if (scrollTop > stickyNavTop) { 
       $('.payment-summary-small').addClass('sticky');
   } else {
       $('.payment-summary-small').removeClass('sticky'); 
   }
   };
-   
   stickyNav();
-   
 
   $(window).scroll(function() {
       stickyNav();
