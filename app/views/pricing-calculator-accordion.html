@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
@@ -19,47 +19,40 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      
-  <h2 class="heading-medium heading-environment">Environment 1 <span class="heading-hint">(e.g. Production)</span></h2>
-              
-  
+      <h2 class="heading-medium heading-environment">Environment 1 <span class="heading-hint">(e.g. Production)</span></h2>
 
-  <div data-module="accordion" class="app-c-accordion js-hidden">
-      
-  
+      <div data-module="accordion" class="app-c-accordion js-hidden">
 
-  <div class="app-c-accordion__section js-section" id="general-information-and-guidance" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Calculate memory usage
-          </h2>
-        </div>
-
-    <div class="app-c-accordion__panel js-panel" id="section-panel-general-information-and-guidance-1">
-          <div id="room_fileds" class="table-memory-usage">
-           <div class=‘label’> 
-           </div>
-              <table>
-                  <thead>
-                    <tr>
-                      <th class="wide-th small-tr" scope="col">App description</th>
-                      <th class="small-tr"scope="col">Memory (GB)</th>
-                      <th class="small-tr"scope="col">Instances</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
-                      <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                      <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                    </tr>
-                    
-                  </tbody>
-              </table>
-              <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
+        <div class="app-c-accordion__section js-section" id="general-information-and-guidance" data-track-count="accordionSection">
+          <div class="app-c-accordion__header js-toggle-panel">
+            <h2 class="app-c-accordion__title js-section-title">
+              Calculate memory usage
+            </h2>
           </div>
-                
-         <div style="margin-top:30px;">
+
+          <div class="app-c-accordion__panel js-panel" id="section-panel-general-information-and-guidance-1">
+            <div id="room_fileds" class="table-memory-usage">
+             <div class=‘label’>
+             </div>
+             <table>
+              <thead>
+                <tr>
+                  <th class="wide-th small-tr" scope="col">App description</th>
+                  <th class="small-tr"scope="col">Memory (GB)</th>
+                  <th class="small-tr"scope="col">Instances</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
+                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                </tr>
+              </tbody>
+            </table>
+            <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
+          </div>
+          <div style="margin-top:30px;">
                <!--  <form>
                   <div class="form-group">
                     <fieldset class="inline">
@@ -83,501 +76,498 @@
                   </div>
                 </form> -->
 
-              <div class="form-group">
-                    <label class="form-label" for="payment-title">
-                      Zero-downtime deploys (per week)
-                      <span class="form-hint-2">
+                <div class="form-group">
+                  <label class="form-label" for="payment-title">
+                    Zero-downtime deploys (per week)
+                    <span class="form-hint-2">
                       If needed, estimate how many deploys per week.<br>
                       Estimated additional cost based on 1.5h average window for app changeover.
-                      </span>
-                      </label>
-                      <input name="payment-title" type="text" class="form-control" id="payment-title"
-                      style="width: 30%;" value="{{ data['payment-title'] }}">
+                    </span>
+                  </label>
+                  <input name="payment-title" type="text" class="form-control" id="payment-title"
+                  style="width: 30%;" value="{{ data['payment-title'] }}">
+                </div>
               </div>
+
+              <details style="margin-bottom:10px;">
+                <summary><span class="summary font-xsmall">How memory cost is calculated?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <p class="font-xsmall">
+                    Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div class="app-c-accordion__section js-section" id="alternative-provision-censuses" data-track-count="accordionSection">
+            <div class="app-c-accordion__header js-toggle-panel">
+              <h2 class="app-c-accordion__title js-section-title">
+                Relational databases: Postgres/MySQL
+              </h2>
             </div>
 
-                <details style="margin-bottom:10px;">
-                  <summary><span class="summary font-xsmall">How memory cost is calculated?</span></summary>
-                  <div class="panel panel-border-narrow">
-                    <p class="font-xsmall">
-                      Compute charged by the Gigabyte-hour, on a pay-as-you-go basis. All usage rounded up to the nearest hour. Load-balancing provided by the platform and included in price. Up to 10 GB/month bandwidth free.
-                    </p>
+            <div class="app-c-accordion__panel js-panel" id="section-panel-alternative-provision-censuses-2">
+              <form>
+                <div class="form-group">
+                  <fieldset>
+
+                    <legend>
+                      <h4 class="heading-small">Choose a plan</h4>
+                    </legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">light-20GB-relational<span class="form-hint-2">
+                        20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM
+                      </span></label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">light-20GB-HA-relational<span class="form-hint-2">
+                        20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM, hot standby
+                      </span></label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">medium-100GB-relational<span class="form-hint-2">
+                        100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised
+                      </span></label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">medium-100GB-HA-relational<span class="form-hint-2">
+                        100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby
+                      </span></label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">medium-100GB-HA-encrypted relational<span class="form-hint-2">
+                        100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby, encrypted
+                      </span></label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                      <label class="font-xsmall" for="radio-1">heavy-512GB-relational<span class="form-hint-2">
+                      512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised.</span>
+                    </label>
                   </div>
-                </details>
+                  <div class="multiple-choice">
+                    <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                    <label class="font-xsmall" for="radio-1">heavy-512GB-relational-HA<span class="form-hint-2">
+                      512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby
+                    </span>
+                  </label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                  <label class="font-xsmall" for="radio-1">heavy-512GB-HA-encrypted<span class="form-hint-2">
+                    512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby, encrypted
+                  </span>
+                </label>
+              </div>
+              <div class="multiple-choice">
+                <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational<span class="form-hint-2">
+                  2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised.
+                </span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+              <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational-HA<span class="form-hint-2">
+                2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby
+              </span>
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">ultraheavy-2TBB-HA-encrypted<span class="form-hint-2">
+              2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby, encrypted
+            </span>
+          </label>
         </div>
+
+      </fieldset>
+    </div>
+    <p><a href="">Add another relational database</a></p>
+
+  </form>
+</div>
+</div>
+
+<div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+  <div class="app-c-accordion__header js-toggle-panel">
+    <h2 class="app-c-accordion__title js-section-title">
+      Document databases: Mongo Cluster
+    </h2>
+  </div>
+
+  <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+    <form>
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <h4 class="heading-small">Choose a plan</h4>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">mongo_tiny<span class="form-hint-2">
+            1GB Mongo instance - 2 nodes</span>
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">mongo_small<span class="form-hint-2">
+          10GB Mongo instance - 2 nodes</span>
+        </label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">mongo_medium<span class="form-hint-2">
+        25GB Mongo instance - 3 nodes</span>
+      </label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label class="font-xsmall" for="radio-1">mongo_large<span class="form-hint-2">
+      50GB Mongo instance - 3 nodes</span>
+    </label>
+  </div>
+  <div class="multiple-choice">
+    <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+    <label class="font-xsmall" for="radio-1">mongo_huge<span class="form-hint-2">
+    75GB Mongo instance - 3 nodes</span>
+  </label>
+</div>
+
+</fieldset>
+</div>
+<p><a href="">Add another document database</a></p>
+
+</form>
+</div>
+</div>
+
+<div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+  <div class="app-c-accordion__header js-toggle-panel">
+    <h2 class="app-c-accordion__title js-section-title">
+      Search: Elasticsearch
+    </h2>
+  </div>
+
+  <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+    <form>
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <h4 class="heading-small">Choose a plan</h4>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">elasticsearch_small<span class="form-hint-2">
+            2GB Elasticsearch cluster</span>
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">elasticsearch_medium<span class="form-hint-2">
+          10GB Elasticsearch cluster</span>
+        </label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">elasticsearch_large<span class="form-hint-2">
+        25GB Elasticsearch cluster</span>
+      </label>
     </div>
 
-      
-      <div class="app-c-accordion__section js-section" id="alternative-provision-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Relational databases: Postgres/MySQL
-          </h2>
-        </div>
+  </fieldset>
+</div>
+<p><a href="">Add another Elasticsearch</a></p>
+</form>
+</div>
+</div>
 
-        <div class="app-c-accordion__panel js-panel" id="section-panel-alternative-provision-censuses-2">
-          <form>
-                    <div class="form-group">
-                      <fieldset>
-
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">light-20GB-relational<span class="form-hint-2">
-                            20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM
-                            </span></label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">light-20GB-HA-relational<span class="form-hint-2">
-                            20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM, hot standby
-                            </span></label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">medium-100GB-relational<span class="form-hint-2">
-                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised
-                            </span></label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">medium-100GB-HA-relational<span class="form-hint-2">
-                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby
-                            </span></label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">medium-100GB-HA-encrypted relational<span class="form-hint-2">
-                            100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby, encrypted
-                            </span></label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">heavy-512GB-relational<span class="form-hint-2">
-                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised.</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">heavy-512GB-relational-HA<span class="form-hint-2">
-                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby
-                          </span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">heavy-512GB-HA-encrypted<span class="form-hint-2">
-                            512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby, encrypted
-                          </span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational<span class="form-hint-2">
-                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised.
-                          </span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational-HA<span class="form-hint-2">
-                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby
-                          </span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">ultraheavy-2TBB-HA-encrypted<span class="form-hint-2">
-                            2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby, encrypted
-                          </span>
-                          </label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                    <p><a href="">Add another relational database</a></p>
-
-                  </form>
-        </div>
-      </div>
-      
-
-      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Document databases: Mongo Cluster
-          </h2>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-          <form>
-                    <div class="form-group">
-                      <fieldset>
-
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">mongo_tiny<span class="form-hint-2">
-                            1GB Mongo instance - 2 nodes</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">mongo_small<span class="form-hint-2">
-                            10GB Mongo instance - 2 nodes</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">mongo_medium<span class="form-hint-2">
-                            25GB Mongo instance - 3 nodes</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">mongo_large<span class="form-hint-2">
-                            50GB Mongo instance - 3 nodes</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">mongo_huge<span class="form-hint-2">
-                            75GB Mongo instance - 3 nodes</span>
-                          </label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                      <p><a href="">Add another document database</a></p>
-
-                  </form>
-        </div>
-      </div>
-
-      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Search: Elasticsearch
-          </h2>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-          <form>
-                    <div class="form-group">
-                      <fieldset>
-
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">elasticsearch_small<span class="form-hint-2">
-                           2GB Elasticsearch cluster</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">elasticsearch_medium<span class="form-hint-2">
-                            10GB Elasticsearch cluster</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">elasticsearch_large<span class="form-hint-2">
-                            25GB Elasticsearch cluster</span>
-                          </label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                      <p><a href="">Add another Elasticsearch</a></p>
-                  </form>
-        </div>
-      </div>
-
-      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Key/Value store: Redis
-          </h2>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-          <form>
-                    <div class="form-group">
-                      <fieldset>
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_small<span class="form-hint-2">
-                            256MB Redis instance - standard mode</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_small_cache<span class="form-hint-2">
-                           256MB Redis instance - cache mode</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_medium<span class="form-hint-2">
-                            1GB Redis instance - standard mode</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_medium_cache<span class="form-hint-2">
-                            1GB Redis instance - cache mode</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_large<span class="form-hint-2">
-                            256MB Redis instance - standard mode</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">redis_large_cache<span class="form-hint-2">
-                            256MB Redis instance - cache mode</span>
-                          </label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                   <p><a href="">Add another key/value store</a></p>
-                  </form>
-        </div>
-      </div>
-
-
-
-      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Message queue: RabbitMQ
-          </h2>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-          <form>
-                    <div class="form-group">
-                      <fieldset>
-
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">rabbit_small<span class="form-hint-2">
-                            256MB Queue</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">rabbit_medium<span class="form-hint-2">
-                            1GB Queue</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">rabbit_large<span class="form-hint-2">
-                            5GB Queue</span>
-                          </label>
-                        </div>
-                      </fieldset>
-                    </div>
-                  <p><a href="">Add another message queue</a></p>
-                  </form>
-
-        </div>
-      </div>
-
-
-      <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Logging: Logit instance
-          </h2>
-        </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-          <form>
-                    <div class="form-group table-memory-usage">
-
-                    <table>
-                          <thead>
-                            <tr>
-                              <th class="small-tr" scope="col">How many GB per day?</th>
-                              <th class="small-tr" scope="col">How many retention days?</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                            </tr>
-                            
-                          </tbody>
-                      </table>
-                      <fieldset>
-
-                        <legend>
-                          <h4 class="heading-small">Choose a plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Basic<span class="form-hint-2">
-                            Single managed ELK stack, Email login, 24/7 monitoring, Alerting, Versioned configuration, Stack version management, Email support</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Pro<span class="form-hint-2">
-                            High availability managed ELK stack with autoscaling and overage protection. Unlimited stacks and users. Single sign-on (SSO) using LDAP, AD & SAML. 2FA. RBAC. Prioritised email support and livechat.</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Enterprise(SLA-99.9%)<span class="form-hint-2">
-                            As Pro, but with SLAs and 99.99% availability. Only available once PaaS combined monthly bill > 10K/month</span>
-                          </label>
-                        </div>
-                      </fieldset>
-
-                    </div>
-                   <p><a href="">Add another logit instance</a></p>
-                  </form>
-
-        </div>
-
-      </div>
-      </div>
-
-      <ul class="list list-space">
-                    <li><a href="#">Add another environment with the same specifications</a></li>
-                    <li><a href="#">Add another environment with different specifications</a></li>
-                  </ul>
-
-
-  <h2 class="heading-medium heading-environment">Support plans</h2>
-
-
-<div data-module="accordion" class="app-c-accordion js-hidden">
 <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
-        <div class="app-c-accordion__header js-toggle-panel">
-          <h2 class="app-c-accordion__title js-section-title">
-            Development and service team support options
-          </h2>
+  <div class="app-c-accordion__header js-toggle-panel">
+    <h2 class="app-c-accordion__title js-section-title">
+      Key/Value store: Redis
+    </h2>
+  </div>
+
+  <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+    <form>
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h4 class="heading-small">Choose a plan</h4>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">redis_small<span class="form-hint-2">
+            256MB Redis instance - standard mode</span>
+          </label>
         </div>
-
-        <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
-           <form>
-                    <div class="form-group">
-                    <!--<h3 class="heading-medium">Choose a support plan</h3>-->                      
-                      <fieldset>
-                        <legend>
-                          <h4 class="heading-small">Choose a support plan</h4>
-                        </legend>
-
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">Trial<span class="form-hint-2">
-                            Up to ten developer support tickets during onboarding, dealt with as best endeavours (normal response within 24h).</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">9 to 5<span class="form-hint-2">
-                            Platform support tickets for teams in development and production. Can raise P1 incidents during office hours.</span>
-                          </label>
-                        </div>
-                        <div class="multiple-choice">
-                          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                          <label class="font-xsmall" for="radio-1">24/7<span class="form-hint-2">
-                            Incident support 24/7 per SLAs. Platform support for teams via email 9-5.</span>
-                          </label>
-                        </div>
-
-                      </fieldset>
-                    </div>
-                  </form>
-
-                   <div class="panel panel-border-wide">
-                    <p>
-                      <a href="">Read more about SLAs.</a>
-                    </p>
-                  </div>
-
-        </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">redis_small_cache<span class="form-hint-2">
+          256MB Redis instance - cache mode</span>
+        </label>
       </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">redis_medium<span class="form-hint-2">
+        1GB Redis instance - standard mode</span>
+      </label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label class="font-xsmall" for="radio-1">redis_medium_cache<span class="form-hint-2">
+      1GB Redis instance - cache mode</span>
+    </label>
+  </div>
+  <div class="multiple-choice">
+    <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+    <label class="font-xsmall" for="radio-1">redis_large<span class="form-hint-2">
+    256MB Redis instance - standard mode</span>
+  </label>
+</div>
+<div class="multiple-choice">
+  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+  <label class="font-xsmall" for="radio-1">redis_large_cache<span class="form-hint-2">
+  256MB Redis instance - cache mode</span>
+</label>
+</div>
+
+</fieldset>
+</div>
+<p><a href="">Add another key/value store</a></p>
+</form>
+</div>
 </div>
 
 
 
-          <div class="form-group dividing-line">
-            <input style="margin-top:30px;" class="button" type="submit" value="Save cost estimate as PDF">
-            <p class="cancel-link"><a href="/set-up-payment">Refresh calculator</a></p>
+<div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+  <div class="app-c-accordion__header js-toggle-panel">
+    <h2 class="app-c-accordion__title js-section-title">
+      Message queue: RabbitMQ
+    </h2>
+  </div>
 
+  <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+    <form>
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <h4 class="heading-small">Choose a plan</h4>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">rabbit_small<span class="form-hint-2">
+            256MB Queue</span>
+          </label>
         </div>
-
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">rabbit_medium<span class="form-hint-2">
+          1GB Queue</span>
+        </label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">rabbit_large<span class="form-hint-2">
+        5GB Queue</span>
+      </label>
     </div>
+  </fieldset>
+</div>
+<p><a href="">Add another message queue</a></p>
+</form>
+
+</div>
+</div>
 
 
+<div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+  <div class="app-c-accordion__header js-toggle-panel">
+    <h2 class="app-c-accordion__title js-section-title">
+      Logging: Logit instance
+    </h2>
+  </div>
 
-    <div class="column-third">
+  <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+    <form>
+      <div class="form-group table-memory-usage">
 
-            <div class="payment-summary-small">
-                <h2>Estimated cost summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="small-tr" scope="col">How many GB per day?</th>
+              <th class="small-tr" scope="col">How many retention days?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+            </tr>
+          </tbody>
+        </table>
+        <fieldset>
 
+          <legend>
+            <h4 class="heading-small">Choose a plan</h4>
+          </legend>
 
-              <table>
-                  <tbody>
-                    <tr>
-                      <td class="font-xsmall">Environment 1:</td>
-                      <td class="font-xsmall">£1,230.00</td>
-                    </tr>
-                    <tr>
-                      <td class="font-xsmall">Environment 2:</td>
-                      <td class="font-xsmall">£910.00</td>
-                    </tr>
-                    <tr>
-                      <td class="font-xsmall">Environment 3:</td>
-                      <td class="font-xsmall">£910.00</td>
-                    </tr>
-                    <tr>
-                      <td class="font-xsmall">Support:</td>
-                      <td class="font-xsmall">£600.00</td>
-                    </tr>
-                  </tbody>
-              </table>
-                   <h3 class="cost-estimate">Total estimated cost:</h3>
-                   <p class="payment-amount">£3,650.00 <span class="payment-amount-pm">per month</span></p>
-              <details>
-                  <summary><span class="summary font-xsmall">Why this cost might vary</span></summary>
-                  <div class="panel panel-border-narrow">
-                    <p class="font-xsmall">
-                      This cost may vary due to a number of factors such as service usuage etc.
-                    </p>
-                  </div>
-                </details>
-            </div>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">Basic<span class="form-hint-2">
+            Single managed ELK stack, Email login, 24/7 monitoring, Alerting, Versioned configuration, Stack version management, Email support</span>
+          </label>
         </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">Pro<span class="form-hint-2">
+          High availability managed ELK stack with autoscaling and overage protection. Unlimited stacks and users. Single sign-on (SSO) using LDAP, AD & SAML. 2FA. RBAC. Prioritised email support and livechat.</span>
+        </label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">Enterprise(SLA-99.9%)<span class="form-hint-2">
+          As Pro, but with SLAs and 99.99% availability. Only available once PaaS combined monthly bill > 10K/month</span>
+        </label>
+      </div>
+    </fieldset>
 
   </div>
+  <p><a href="">Add another logit instance</a></p>
+</form>
+
+</div>
+
+</div>
+</div>
+
+<ul class="list list-space">
+  <li><a href="#">Add another environment with the same specifications</a></li>
+  <li><a href="#">Add another environment with different specifications</a></li>
+</ul>
+
+
+<h2 class="heading-medium heading-environment">Support plans</h2>
+
+
+<div data-module="accordion" class="app-c-accordion js-hidden">
+  <div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+    <div class="app-c-accordion__header js-toggle-panel">
+      <h2 class="app-c-accordion__title js-section-title">
+        Development and service team support options
+      </h2>
+    </div>
+
+    <div class="app-c-accordion__panel js-panel" id="section-panel-general-hospital-school-censuses-3">
+     <form>
+      <div class="form-group">
+        <!--<h3 class="heading-medium">Choose a support plan</h3>-->                      
+        <fieldset>
+          <legend>
+            <h4 class="heading-small">Choose a support plan</h4>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+            <label class="font-xsmall" for="radio-1">Trial<span class="form-hint-2">
+            Up to ten developer support tickets during onboarding, dealt with as best endeavours (normal response within 24h).</span>
+          </label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <label class="font-xsmall" for="radio-1">9 to 5<span class="form-hint-2">
+          Platform support tickets for teams in development and production. Can raise P1 incidents during office hours.</span>
+        </label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label class="font-xsmall" for="radio-1">24/7<span class="form-hint-2">
+        Incident support 24/7 per SLAs. Platform support for teams via email 9-5.</span>
+      </label>
+    </div>
+
+  </fieldset>
+</div>
+</form>
+
+<div class="panel panel-border-wide">
+  <p>
+    <a href="">Read more about SLAs.</a>
+  </p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="form-group dividing-line">
+  <input style="margin-top:30px;" class="button" type="submit" value="Save cost estimate as PDF">
+  <p class="cancel-link"><a href="/set-up-payment">Refresh calculator</a></p>
+
+</div>
+
+</div>
+
+
+
+<div class="column-third">
+
+  <div class="payment-summary-small">
+    <h2>Estimated cost summary</h2>
+
+
+    <table>
+      <tbody>
+        <tr>
+          <td class="font-xsmall">Environment 1:</td>
+          <td class="font-xsmall">£1,230.00</td>
+        </tr>
+        <tr>
+          <td class="font-xsmall">Environment 2:</td>
+          <td class="font-xsmall">£910.00</td>
+        </tr>
+        <tr>
+          <td class="font-xsmall">Environment 3:</td>
+          <td class="font-xsmall">£910.00</td>
+        </tr>
+        <tr>
+          <td class="font-xsmall">Support:</td>
+          <td class="font-xsmall">£600.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="cost-estimate">Total estimated cost:</h3>
+    <p class="payment-amount">£3,650.00 <span class="payment-amount-pm">per month</span></p>
+    <details>
+      <summary><span class="summary font-xsmall">Why this cost might vary</span></summary>
+      <div class="panel panel-border-narrow">
+        <p class="font-xsmall">
+          This cost may vary due to a number of factors such as service usuage etc.
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+</div>
 
 </main>
 
