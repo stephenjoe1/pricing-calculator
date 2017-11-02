@@ -31,20 +31,35 @@
 </nav>
 
 <div class="container">
-    <div class="grid-row">
+  <div class="grid-row">
+    <div class="column-full filter-fields">
+        <div class="back">
+          <a href="/request-trial-choose.html" class="link-back">Back</a>
+        </div>
+    </div>
 
         <div class="column-two-thirds">
-            <h1 class="heading-large">Request to join an existing organisation</h1>
+            <h1 class="heading-large">Request a GOV.UK PaaS account</h1>
+             <div class="form-group">
+             <h2 class="heading-medium">Your details</h2>
+              <label class="form-label" for="full-name">
+                Full name</label>
+              <input class="form-control" id="full-name" type="text" name="full-name" style="width: 100%;">
+            </div>
 
-            <p>If your team is already using GOV.UK PaaS and you would like a user account, ask an Org Manager to contact us and make a request at:<br><a href="mailto:gov-uk-paas-support@digital.cabinet-office.gov.uk">gov-uk-paas-support@digital.cabinet-office.gov.uk</a></p>
+            <div class="form-group">
+              <label class="form-label" for="email-address">
+                Email address <span class="form-hint">Must be from a government organisation</span>
+              </label>
+              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
+            </div>
 
-            <p>Org Managers administer the account and assign roles and permissions.</p>
 
-            <p>Users with non-government email addresses can be added to an account at the request of an Org Manager.</p>
+            <div class="form-group">
+              <a href="/request-trial-your-organisation.html"><input class="button" type="submit" value="Continue"></a>
+            </div>
 
-            <p>
-              <a href="/contact-us.html">Need more help?</a>
-           </p>
+        </div>
 
         <div class="column-one-third"></div>
     </div>

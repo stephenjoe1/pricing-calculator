@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+ 
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://www.gov.uk/service-toolkit#components" itemprop="item">
+                <span itemprop="name">Components</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/product-page" itemprop="item">
+                <span itemprop="name">GOV.UK PaaS</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="#main" itemprop="item">
+                <span itemprop="name">Request an account</span>
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<div class="container">
+  <div class="grid-row">
+    <div class="column-full filter-fields">
+        <div class="back">
+          <a href="/request-trial-choose.html" class="link-back">Back</a>
+        </div>
+    </div>
+
+        <div class="column-two-thirds">
+            <h1 class="heading-large">Request a GOV.UK PaaS account</h1>
+             <div class="form-group">
+             <h2 class="heading-medium">Your organisation</h2>
+              <label class="form-label" for="full-name">
+                Name of your government department or agency</label>
+              <input class="form-control" id="full-name" type="text" name="full-name" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email-address">
+                Name of the service or team you work on
+              </label>
+              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
+            </div>
+
+
+             <form action="/request-trial-invite-users" class="request-trial-form">
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h2 class="heading-small">Will you be a manager of this organisation? <span class="form-hint">Organisations are controlled by ‘org managers’ who are responsible for administering the account and assigning roles and permissions to users within the organisation.</span> 
+                    </h2>
+                  </legend>
+                  <div class="multiple-choice">
+                    <input id="request-trial-invite-users" type="radio" name="request-trial-invite-users" value="Yes">
+                    <label for="request-trial-invite-users">Yes, I will be an org manager for this organisation</label>
+                  </div>
+
+                  <div class="multiple-choice" data-target="contact-by-text">
+                    <input id="request-trial-invite-users" type="radio" name="request-trial-invite-users" value="No">
+                    <label for="request-trial-invite-users">No, I will nominate someone else to be an org manager</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                    <label class="form-label" for="contact-text-message">You will need to specify at least one ‘org manager’ in order for us to set up your organisation. If you do not intend to manage the organisation yourself you can invite your nominated manager in the following section.</label>
+                  </div>
+
+                </fieldset>
+              </div>
+              <div class="form-group">
+              <a href="/request-trial-invite-users.html"><input class="button" type="submit" value="Continue"></a>
+            </div>
+            </form>
+
+        </div>
+
+        <div class="column-one-third"></div>
+    </div>
+</div>
+
+</main>
+
+{% endblock %}
