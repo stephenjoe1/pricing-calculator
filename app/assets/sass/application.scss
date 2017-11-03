@@ -110,8 +110,8 @@ padding-left: 0px;
 
 .pricing-example {
     margin-top: 30px;
-    margin-left: 15px;
-    border: 5px solid $panel-colour;
+    margin-left: 0px;
+    border: 10px solid $panel-colour;
     padding-left: 5px;
     padding-bottom: 30px;
     padding-right: 15px;
@@ -129,8 +129,12 @@ padding-left: 0px;
     font-size: 16px;
   }
 
-//extras1 end
+.support-plan {
+  margin-left: 0px;
+  padding-left: 0px;
+}
 
+//extras1 end
 
 
 .cancel-link {
@@ -427,6 +431,13 @@ tr.clickable-row:hover {
   border: 10px solid #DEE0E2;
   background-color: #F8F8F8;
   padding: 15px;
+  margin-top: 75px;
+}
+
+.sticky-cost-button {
+  border: 0px;
+  background-color: #fff;
+  padding: 0px;
   margin-top: 75px;
 }
 
