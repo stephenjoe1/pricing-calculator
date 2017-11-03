@@ -12,13 +12,16 @@ router.get('/pricing-calculator-accordion', function (req, res) {
   var environmentCost = 0
   totalPrice = currencyFormatter.format(totalPrice, { code: 'GBP' })
   environmentCost = currencyFormatter.format(environmentCost, {code: 'GBP'})
+  var environments = [1]
+  console.log(environments)
   var environmentName = "Environment 1"
   res.render(
     'pricing-calculator-accordion',
     {
       totalPrice: totalPrice,
       environmentCost: environmentCost,
-      environmentName: environmentName
+      environmentName: environmentName,
+      environments: environments
     }
   )
 })
@@ -29,12 +32,14 @@ router.get('/add-enviroment', function (req, res) {
   totalPrice = currencyFormatter.format(totalPrice, { code: 'GBP' })
   environmentCost = currencyFormatter.format(environmentCost, {code: 'GBP'})
   var environmentName = "Environment 2"
+  var environments = [1, 1]
   res.render(
     'pricing-calculator-accordion',
     {
       totalPrice: totalPrice,
       environmentCost: environmentCost,
-      environmentName: environmentName
+      environmentName: environmentName,
+      environments: environments
     }
   )
 })

@@ -17,9 +17,13 @@ GOV.UK prototype kit
     </div>
   </div>
 
+<div class="grid-row">
+  <div class="column-two-thirds">
 {% for environment in environments %}
   {% include "_environment.html" %}
 {% endfor %}
+  </div>
+</div>
 
 <ul class="list list-space">
   <li><a href="/add-enviroment">Add another environment with the same specifications</a></li>
