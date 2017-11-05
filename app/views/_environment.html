@@ -13,22 +13,24 @@
             <div id="room_fileds" class="table-memory-usage">
              <div class=‘label’>
              </div>
-             <table>
-              <thead>
-                <tr>
-                  <th class="wide-th small-tr" scope="col">App description</th>
-                  <th class="small-tr"scope="col">Memory (GB)</th>
-                  <th class="small-tr"scope="col">Instances</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
-                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                </tr>
-              </tbody>
-            </table>
+             <fieldset id="memory-usage">
+               <table>
+                <thead>
+                  <tr>
+                    <th class="wide-th small-tr" scope="col">App description</th>
+                    <th class="small-tr"scope="col">Memory (GB)</th>
+                    <th class="small-tr"scope="col">Instances</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><input name="app-description" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
+                    <td ><input name="memory" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                    <td ><input name="instances" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </fieldset>
             <input type="button" id="more_fields" onclick="add_fields();" value="Add another app" />
           </div>
           <div style="margin-top:30px;">
