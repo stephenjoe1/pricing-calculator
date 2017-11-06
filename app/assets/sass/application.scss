@@ -29,6 +29,113 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+@import "util/printable";
+
+@import "modules/breadcrumbs";
+@import "modules/content-section";
+@import "modules/command";
+@import "modules/full-width-form";
+@import "modules/govuk-logo";
+@import "modules/header";
+@import "modules/hero";
+@import "modules/hero-alternative-action";
+@import "modules/hero-button";
+@import "modules/masthead";
+@import "modules/phase-banner";
+@import "modules/related-items";
+@import "modules/responsive-embed";
+@import "modules/skip-link";
+// @import "modules/task-list";
+@import "modules/sub-navigation";
+
+//extras 1
+
+html, body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  @include core-19;
+}
+
+.hero__title {
+  margin-top: 30px;
+}
+
+
+#main {
+  display: block;
+  margin-bottom: $gutter * 3;
+}
+
+.container {
+  @extend %site-width-container;
+}
+
+a:link {
+  color: $link-colour;
+}
+
+a:visited {
+  color: $link-visited-colour;
+}
+
+a:hover {
+  color: $link-hover-colour;
+}
+
+a:active {
+  color: $link-active-colour;
+}
+
+.column-one-whole {
+  @include grid-column(1/1);
+}
+
+fieldset {
+    display: block;
+padding-left: 0px;
+    border-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+  }
+
+
+.pricing-support th {
+    font-size: 16px;
+  }
+.pricing-support td {
+    font-size: 16px;
+  }
+
+.pricing-example {
+    margin-top: 30px;
+    margin-left: 0px;
+    border: 10px solid $panel-colour;
+    padding-left: 5px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+
+.pricing-example .heading-small {
+    margin-top: 5px;
+  }
+
+.pricing-example th {
+    font-size: 16px;
+  }
+.pricing-example td {
+    font-size: 16px;
+  }
+
+.support-plan {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+//extras1 end
+
 
 .cancel-link {
   margin-top: 20px;
@@ -95,12 +202,17 @@ $path: "/public/images/";
 
 #global-header.with-proposition .header-wrapper .header-global {
     float: left;
-    width: 45%;
+    width: 50%;
 }
 
 #global-header.with-proposition .header-wrapper .header-proposition {
-    width: 55%;
+    width: 50%;
     float: right;
+}
+
+.phase-banner {
+  margin-left: 10px;
+  border-bottom: 1px solid black;
 }
 
 .bottom-space {
@@ -272,6 +384,9 @@ $path: "/public/images/";
   margin-right: 0px;
 }
 
+.permissions-type {
+  margin-top: 30px;
+}
 
 .permission-list {
   color: $secondary-text-colour;
@@ -321,6 +436,13 @@ tr.clickable-row:hover {
   border: 10px solid #DEE0E2;
   background-color: #F8F8F8;
   padding: 15px;
+  margin-top: 75px;
+}
+
+.sticky-cost-button {
+  border: 0px;
+  background-color: #fff;
+  padding: 0px;
   margin-top: 75px;
 }
 

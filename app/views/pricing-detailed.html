@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://paas-product-proto.cloudapps.digital/" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Pricing</span></a>
+    </li>
+  </ol>
+</nav>
+
+
+<div class="container">
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">Pricing</h1>
+      <h2 class="heading-medium">
+        Start with a free trial account
+      </h2>
+      <p>
+        You can test the platform for up to three months, with no obligations to pay anything while you decide whether GOV.UK PaaS is for you. You’ll get to use trial-sized editions of most of our backing services.
+        </p>
+        <p><a href="https://paas-product-proto.cloudapps.digital/signup">Request a trial account</a></p>
+
+      <h2 class="heading-medium">
+        Move to a full account with no long-term contract
+      </h2>
+      <p>During the trial period you can switch to a full paid account any time and get to use all of the functionality of the PaaS.</p>
+      <p>You don’t have to commit to a long-term contract, and you can enable and disable apps, databases and services as required.</p> 
+      <p>The monthly charges will be <a href="/pricing-calculator-accordion">based on your usage</a>.</p>
+
+
+      <h2 class="heading-medium">
+        Costs and benefits of a PaaS
+      </h2>
+      <p>
+        If you’re evaluating cloud hosting, you’ll find that the costs of a PaaS are higher than a traditional IaaS solution. This is also true for GOV.UK PaaS.</p>
+        <p>In order to compare the two, you need to consider the effort and time required by your team to manage and run the environments, like patching operating systems and monitoring the infrastructure.</p>
+
+
+    <!--   <h2 class="heading-large">Our pricing in practice</h2>
+            <p>See some example pricing scales below</p><br> -->
+
+<!-- <div class="column-full pricing-example" style="margin-top:0px;">
+    <div class="column-one-half">
+      <h3 class="heading-small">Example 1:<br> microsite for arms-length body</h3>
+      <p class="font-xsmall">Two instances of your application, with a small highly-available Postgres database and a basic-level support.</p>
+    </div>
+      <div class="column-one-half">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Component
+            </th>
+            <th>
+              Cost
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-xsmall">Compute and database</td>
+            <td class="font-xsmall">£117</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Support</td>
+            <td class="font-xsmall">£125</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Total</td>
+            <td class="bold-small">£242</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  </div> -->
+
+<!-- <div class="column-full pricing-example">
+    <div class="column-one-half">
+      <h3 class="heading-small">Example 2:<br> small transactional service during development</h3>
+      <p class="font-xsmall">Three-application service (for instance public, operator, admin apps), with small Postgres database. Demo and dev environments, with developers experimenting with Elasticsearch, Redis, Mongo and RabbitMQ. Also a space for user research prototypes. Basic paid support.</p>
+    </div>
+      <div class="column-one-half">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Component
+            </th>
+            <th>
+              Cost
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-xsmall">Compute - 8 prototypes</td>
+            <td class="font-xsmall">£29</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Compute, DB and services - demo</td>
+            <td class="font-xsmall">£117</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Compute, DB and services - dev</td>
+            <td class="font-xsmall">£247</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Support</td>
+            <td class="font-xsmall">£125</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Total</td>
+            <td class="bold-small">£518</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
+ -->
+<!-- <div class="column-full pricing-example">
+    <div class="column-one-half">
+      <h3 class="heading-small">Example 3:<br> 100K transaction/year service in production with active development</h3>
+      <p class="font-xsmall">Three-application service with two load-balanced instances each, supported by a medium highly-available Postgres database, Redis cache to improve performance, Elasticsearch and 7d logging. Staging environment; smaller integration instance. 24/7 incident support.</p>
+    </div>
+      <div class="column-one-half">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Component
+            </th>
+            <th>
+              Cost
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-xsmall">Compute, DB and services - production</td>
+            <td class="font-xsmall">£607</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Compute, DB and services - staging</td>
+            <td class="font-xsmall">£416</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Compute, DB and services - integration</td>
+            <td class="font-xsmall">£330</td>
+          </tr>
+          <tr>
+            <td class="font-xsmall">Support</td>
+            <td class="font-xsmall">£541</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Total</td>
+            <td class="bold-small">£1,894</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>
+ -->
+
+
+<!-- <div class="column-full support-plan"> -->
+      <h2 class="heading-medium">Support plans</h2>
+      <p>While we’re responsible for the overall <a href="https://status.cloud.service.gov.uk/">health of the platform</a>, your service might need help using the PaaS, and support for specific issues caused by the platform to your app. There is a minimum monthly fee that depends on whether support is needed 24/7 or just during office hours, and the final cost is calculated on how many apps, instances and backing services you are using. We won’t charge users in trial mode for support, however resolution times will depend on best endeavours.</p>
+  
+      <table class="table pricing-support">
+        <thead>
+          <tr>
+            <th>Support Tier</th>
+            <th>Support Offered</th>
+            <th>Timescales</th>
+            <th>Minimum Monthly Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trial</td>
+            <td>Ad hoc</td>
+            <td>Best endeavours</td>
+            <td>No charge</td>
+          </tr>
+          <tr>
+            <td>Daytime</td>
+            <td>Daytime support from the PaaS team. Mon-Fri 9.30am-5.30pm</td>
+            <td>Daytime response and resolution targets</td>
+            <td>£125</td>
+          </tr>
+          <tr>
+            <td>24/7</td>
+            <td>As above, plus 24/7 incident support; penetration tests allowed</td>
+            <td>As above, plus night-time response and resolution targets, <a href="https://paas-product-proto.cloudapps.digital/support">per SLAs</a></td>
+            <td>£500</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <br>
+      <p>
+        Contact <a href="mailto:gov-uk-paas-support@digital.cabinet-office.gov.uk">gov-uk-paas-support@digital.cabinet-office.gov.uk</a>
+        if you want to discuss bespoke support for your service.
+      </p>
+  <!-- </div> -->
+  </div>
+
+  <div class="column-one-third" style="margin-top:45px;">
+        <div class="payment-summary-small">
+            <a href="/pricing-calculator-accordion" class="button">Calculate your own cost</a>
+            <p class="font-xsmall" style="margin-top:15px;">Use our cost calculator to get estimate costs for your service using GOV.UK PaaS</p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</main>
+
+{% endblock %}

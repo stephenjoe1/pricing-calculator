@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+ 
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://www.gov.uk/service-toolkit#components" itemprop="item">
+                <span itemprop="name">Components</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/product-page" itemprop="item">
+                <span itemprop="name">GOV.UK PaaS</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="#main" itemprop="item">
+                <span itemprop="name">Get started</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="#main" itemprop="item">
+                <span itemprop="name">Request an account</span>
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<div class="container">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+        <h1 class="heading-large">Request a GOV.UK PaaS account</h1>
+        <p>Service teams on GOV.UK PaaS own and use an account called an ‘organisation’. 
+                    </p>
+
+            <form action="/request-trial-redirect">
+              <div class="form-group">
+                <fieldset>
+                  <legend>
+                    <h2 class="heading-small">Do you want to create an organisation? <span class="form-hint">An organisation typically represents the government department, agency or team you work for.</span> 
+                    </h2>
+                  </legend>
+                  <div class="multiple-choice">
+                    <input id="request-trial-your-details" type="radio" name="radiogroup" value="request-trial-your-details">
+                    <label for="request-trial">Yes, I'm new to PaaS and want to create an organisation</label>
+
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="request-trial-2" type="radio" name="radiogroup" value="request-trial-2">
+                    <label for="request-trial-2">No, I'd like to join an existing organisation</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <input class="button" type="submit" value="Continue">
+              </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</main>
+
+{% endblock %}
