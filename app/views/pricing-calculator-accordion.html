@@ -26,7 +26,7 @@ GOV.UK prototype kit
 
       <div data-module="accordion" class="app-c-accordion js-hidden">
 
-        <div class="app-c-accordion__section js-section" id="general-information-and-guidance" data-track-count="accordionSection">
+        <div class="app-c-accordion__section js-section memory-usage" id="general-information-and-guidance" data-track-count="accordionSection">
           <div class="app-c-accordion__header js-toggle-panel">
             <h2 class="app-c-accordion__title js-section-title">
               Calculate memory usage
@@ -46,10 +46,10 @@ GOV.UK prototype kit
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="app-row">
                   <th scope="row"><input name="form-control" type="text" class="form-control" id="form-control" style="width: 400px;" value="{{ data['payment-title'] }}"></th>
-                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 gb-per-instance" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+                  <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 instance-count" id="form-control-3-4 instance-count" value="{{ data['payment-title'] }}"></td>
                 </tr>
               </tbody>
             </table>
@@ -87,7 +87,7 @@ GOV.UK prototype kit
                       Estimated additional cost based on 1.5h average window for app changeover.
                     </span>
                   </label>
-                  <input name="payment-title" type="text" class="form-control" id="payment-title"
+                  <input name="payment-title" type="text" class="form-control zero-downtime-deploy-count" id="payment-title"
                   style="width: 30%;" value="{{ data['payment-title'] }}">
                 </div>
               </div>
