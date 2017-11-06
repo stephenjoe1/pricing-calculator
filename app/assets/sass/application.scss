@@ -202,12 +202,17 @@ padding-left: 0px;
 
 #global-header.with-proposition .header-wrapper .header-global {
     float: left;
-    width: 45%;
+    width: 50%;
 }
 
 #global-header.with-proposition .header-wrapper .header-proposition {
-    width: 55%;
+    width: 50%;
     float: right;
+}
+
+.phase-banner {
+  margin-left: 10px;
+  border-bottom: 1px solid black;
 }
 
 .bottom-space {
