@@ -487,20 +487,20 @@ GOV.UK prototype kit
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-            <label class="font-xsmall" for="radio-1">Trial<span class="form-hint-2">
+            <input id="support-plan-1" type="radio" name="support-plan" value="trial">
+            <label class="font-xsmall" for="support-plan-1">Trial<span class="form-hint-2">
             Up to ten developer support tickets during onboarding, dealt with as best endeavours (normal response within 24h).</span>
           </label>
         </div>
         <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-          <label class="font-xsmall" for="radio-1">9 to 5<span class="form-hint-2">
+          <input id="support-plan-2" type="radio" name="support-plan" value="9-to-5">
+          <label class="font-xsmall" for="support-plan-2">9 to 5<span class="form-hint-2">
           Platform support tickets for teams in development and production. Can raise P1 incidents during office hours.</span>
         </label>
       </div>
       <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-        <label class="font-xsmall" for="radio-1">24/7<span class="form-hint-2">
+        <input id="support-plan-3" type="radio" name="support-plan" value="24-7">
+        <label class="font-xsmall" for="support-plan-3">24/7<span class="form-hint-2">
         Incident support 24/7 per SLAs. Platform support for teams via email 9-5.</span>
       </label>
     </div>
@@ -523,7 +523,7 @@ GOV.UK prototype kit
 
 <div class="form-group dividing-line">
   <input style="margin-top:30px;" class="button" type="submit" value="Save cost estimate as PDF">
-  <p class="cancel-link"><a href="/set-up-payment">Refresh calculator</a></p>
+  <p class="cancel-link"><a href="/pricing-calculator-accordion">Refresh calculator</a></p>
 
 </div>
 
@@ -541,8 +541,9 @@ GOV.UK prototype kit
       <tbody>
         <tr>
           <td class="font-xsmall">Environment 1:</td>
-          <td class="font-xsmall">£1,230.00</td>
+          <td class="font-xsmall environment-1-output">£0.00</td>
         </tr>
+        <!--
         <tr>
           <td class="font-xsmall">Environment 2:</td>
           <td class="font-xsmall">£910.00</td>
@@ -551,14 +552,15 @@ GOV.UK prototype kit
           <td class="font-xsmall">Environment 3:</td>
           <td class="font-xsmall">£910.00</td>
         </tr>
+        -->
         <tr>
           <td class="font-xsmall">Support:</td>
-          <td class="font-xsmall">£600.00</td>
+          <td class="font-xsmall support-cost-output">£0.00</td>
         </tr>
       </tbody>
     </table>
     <h3 class="cost-estimate">Total estimated cost:</h3>
-    <p class="payment-amount">£3,650.00 <span class="payment-amount-pm">per month</span></p>
+    <p class="payment-amount"><span class="total-cost-output">£0.00</span> <span class="payment-amount-pm">per month</span></p>
     <details>
       <summary><span class="summary font-xsmall">Why this cost might vary</span></summary>
       <div class="panel panel-border-narrow">

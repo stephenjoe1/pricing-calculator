@@ -46,6 +46,18 @@ plan_multipliers = {
     "enterprise": 1.5
 }
 
+minimum_support_cost_by_plan = {
+    "trial": 0,
+    "9-to-5": 125,
+    "24-7": 500
+}
+
+platform_cost_multiplier_by_support_plan = {
+    "trial": 0,
+    "9-to-5": 0.2,
+    "24-7": 0.55
+}
+
 function find_plan_lte(plans, value) {
     var plan
     for (var i = plans.length - 1; i >= 0; i--) {
@@ -66,12 +78,27 @@ function add_fields() {
     objTo.appendChild(divtest)
 }
 
+function gbp(number) {
+    return number.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'})
+}
+
+var app_cost = 0.0
+  , relational_cost = 0.0
+  , mongo_cost = 0.0
+  , elasticsearch_cost = 0.0
+  , redis_cost = 0.0
+  , rabbitmq_cost = 0.0
+  , logit_cost = 0.0
+  , support_plan = 0.0
+
+var trigger_price_update
+
 $(document).ready(function () {
     $(".memory-usage").on("keyup", "input", function (e) {
         var total_gb_used = 0.0
         $(".app-row").each(function () {
-            var gb_per_instance = parseFloat($("input.gb-per-instance").val()) || 0
-            var instance_count = parseInt($("input.instance-count").val()) || 0
+            var gb_per_instance = parseFloat($("input.gb-per-instance", this).val()) || 0
+            var instance_count = parseInt($("input.instance-count", this).val()) || 0
             total_gb_used += gb_per_instance * instance_count
         })
         console.log("total_gb_used: " + total_gb_used)
@@ -83,28 +110,45 @@ $(document).ready(function () {
         var cost_of_zero_downtime_instances = Math.min(number_of_zero_downtime_deploys * total_gb_used * 0.03747068852, cost_of_instances)
         console.log("cost_of_zero_downtime_instances: £" + cost_of_zero_downtime_instances)
 
-        var app_cost = cost_of_instances + cost_of_zero_downtime_instances
+        app_cost = cost_of_instances + cost_of_zero_downtime_instances
         console.log("app_cost: £" + app_cost)
+
+        trigger_price_update()
     })
 
     $("input[type=radio][name=relational]").change(function (e) {
-        console.log("relational: £" + parseFloat($("input[type=radio][name=relational]:checked").val()))
+        relational_cost = parseFloat($("input[type=radio][name=relational]:checked").val()) || 0
+        console.log("relational: £" + relational_cost)
+
+        trigger_price_update()
     })
 
     $("input[type=radio][name=mongo]").change(function (e) {
-        console.log("mongo: £" + parseFloat($("input[type=radio][name=mongo]:checked").val()))
+        mongo_cost = parseFloat($("input[type=radio][name=mongo]:checked").val()) || 0
+        console.log("mongo: £" + mongo_cost)
+
+        trigger_price_update()
     })
 
     $("input[type=radio][name=elasticsearch]").change(function (e) {
-        console.log("elasticsearch: £" + parseFloat($("input[type=radio][name=elasticsearch]:checked").val()))
+        elasticsearch_cost = parseFloat($("input[type=radio][name=elasticsearch]:checked").val()) || 0
+        console.log("elasticsearch: £" + elasticsearch_cost)
+
+        trigger_price_update()
     })
 
     $("input[type=radio][name=redis]").change(function (e) {
-        console.log("redis: £" + parseFloat($("input[type=radio][name=redis]:checked").val()))
+        redis_cost = parseFloat($("input[type=radio][name=redis]:checked").val())
+        console.log("redis: £" + redis_cost)
+
+        trigger_price_update()
     })
 
     $("input[type=radio][name=rabbitmq]").change(function (e) {
-        console.log("rabbitmq: £" + parseFloat($("input[type=radio][name=rabbitmq]:checked").val()))
+        rabbitmq_cost = parseFloat($("input[type=radio][name=rabbitmq]:checked").val())
+        console.log("rabbitmq: £" + rabbitmq_cost)
+
+        trigger_price_update()
     })
 
     $(".logit").on("change keyup", "input", function (e) {
@@ -123,15 +167,45 @@ $(document).ready(function () {
         var plan_multiplier = plan_multipliers[plan]
         console.log("plan_multiplier: " + plan_multiplier)
 
-        var logit_cost = daily_log_volume * unit_cost_by_daily_log_volume
+        logit_cost = daily_log_volume * unit_cost_by_daily_log_volume
         logit_cost *= retention * retention_multiplier
         logit_cost *= plan_multiplier
         logit_cost *= 1.17 // hardcoded `dollarsToThePound*teamContributionFactor`
         logit_cost = logit_cost || 0
         console.log("logit_cost: £" + logit_cost)
+
+        trigger_price_update()
     })
 
-    $("input[type=radio][name=rabbitmq]").change(function (e) {
-        console.log("rabbitmq: £" + parseFloat($("input[type=radio][name=rabbitmq]:checked").val()))
+    $("input[type=radio][name=support-plan]").change(function (e) {
+        support_plan = $("input[type=radio][name=support-plan]:checked").val()
+        console.log("support_plan: " + support_plan)
+
+        trigger_price_update()
     })
+
+    trigger_price_update = function () {
+        var services_cost = relational_cost + mongo_cost + elasticsearch_cost + redis_cost + rabbitmq_cost
+        console.log("services_cost: £" + services_cost)
+        var platform_cost = app_cost + services_cost + logit_cost
+        console.log("platform_cost: £" + platform_cost)
+
+        var minimum_support_cost = minimum_support_cost_by_plan[support_plan] || 0
+        console.log("minimum_support_cost: £" + minimum_support_cost)
+        var multiplier_support_cost = (platform_cost * platform_cost_multiplier_by_support_plan[support_plan]) || 0
+        console.log("multiplier_support_cost: £" + multiplier_support_cost)
+        var support_cost = Math.max(minimum_support_cost, multiplier_support_cost)
+        console.log("support_cost: £" + support_cost)
+
+        var cost = platform_cost + support_cost
+        console.log("cost: £" + cost)
+
+        $(".environment-1-output").text(gbp(platform_cost.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'})))
+        $(".support-cost-output").text(gbp(support_cost.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'})))
+        $(".total-cost-output").text(gbp(cost.toLocaleString('en-GB', {style: 'currency', currency: 'GBP'})))
+        console.log("-----")
+    }
+
+    // Reset all prices to zero
+    trigger_price_update()
 })
