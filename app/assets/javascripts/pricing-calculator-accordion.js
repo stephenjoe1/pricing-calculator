@@ -107,7 +107,7 @@ $(document).ready(function () {
         console.log("rabbitmq: £" + parseFloat($("input[type=radio][name=rabbitmq]:checked").val()))
     })
 
-    $(".logit").on("change", "input", function (e) {
+    $(".logit").on("change keyup", "input", function (e) {
         var daily_log_volume = parseFloat($("input.daily-log-volume").val()) || 0
         console.log("daily_log_volume: " + daily_log_volume)
         var unit_cost_by_daily_log_volume = find_plan_lte(unit_costs_by_daily_log_volume, daily_log_volume)
