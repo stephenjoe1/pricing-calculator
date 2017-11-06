@@ -151,13 +151,13 @@ $(document).ready(function () {
         trigger_price_update()
     })
 
-    $(".logit").on("change keyup", "input", function (e) {
-        var daily_log_volume = parseFloat($("input.daily-log-volume").val()) || 0
+    $(".logit").on("change keyup", "input, select", function (e) {
+        var daily_log_volume = parseFloat($(".daily-log-volume").val()) || 0
         console.log("daily_log_volume: " + daily_log_volume)
         var unit_cost_by_daily_log_volume = find_plan_lte(unit_costs_by_daily_log_volume, daily_log_volume)
         console.log("unit_cost_by_daily_log_volume: " + unit_cost_by_daily_log_volume)
 
-        var retention = parseInt($("input.retention").val()) || 0
+        var retention = parseInt($(".retention").val()) || 0
         console.log("retention: " + retention)
         var retention_multiplier = find_plan_lte(retention_multipliers, retention)
         console.log("retention_multiplier: " + retention_multiplier)

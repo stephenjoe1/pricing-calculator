@@ -420,8 +420,22 @@ GOV.UK prototype kit
           </thead>
           <tbody>
             <tr>
-              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 daily-log-volume" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 retention" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+              <td>
+                <select name="form-control-3-4" class="form-control form-control-3-4 daily-log-volume" id="form-control-3-4">
+                  <option value="1">1GB</option>
+                  <option value="10">10GB</option>
+                  <option value="100">100GB</option>
+                  <option value="1000">1000GB</option>
+                </select>
+              </td>
+              <td>
+                <select name="form-control-3-4" type="text" class="form-control form-control-3-4 retention" id="form-control-3-4">
+                  <option value="7">7 days</option>
+                  <option value="30">30 days</option>
+                  <option value="90">3 months</option>
+                  <option value="365">1 year</option>
+                </select>
+              </td>
             </tr>
           </tbody>
         </table>
