@@ -6,6 +6,9 @@ GOV.UK prototype kit
 
 {% block content %}
 
+{% block page_scripts %}
+<script src="/public/javascripts/pricing-calculator-accordion.js"></script>
+{% endblock %}
 
 
 <main id="content" role="main">
@@ -117,72 +120,72 @@ GOV.UK prototype kit
                     </legend>
 
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="light-20GB-relational" data-cost="36.64">
-                      <label class="font-xsmall" for="radio-1">light-20GB-relational<span class="form-hint-2">
+                      <input id="relational-1" type="radio" name="relational" value="36.64">
+                      <label class="font-xsmall" for="relational-1">light-20GB-relational<span class="form-hint-2">
                         20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM
                       </span></label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="light-20GB-HA-relational" data-cost="73.29">
-                      <label class="font-xsmall" for="radio-1">light-20GB-HA-relational<span class="form-hint-2">
+                      <input id="relational-2" type="radio" name="relational" value="73.29">
+                      <label class="font-xsmall" for="relational-2">light-20GB-HA-relational<span class="form-hint-2">
                         20GB, 200 concurrent connections, Low network performance, 1 vCPU 1GB RAM, hot standby
                       </span></label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="medium-100GB-relational" data-cost="188.86">
-                      <label class="font-xsmall" for="radio-1">medium-100GB-relational<span class="form-hint-2">
+                      <input id="relational-3" type="radio" name="relational" value="188.86">
+                      <label class="font-xsmall" for="relational-3">medium-100GB-relational<span class="form-hint-2">
                         100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised
                       </span></label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="medium-100GB-HA-relational" data-cost="377.72">
-                      <label class="font-xsmall" for="radio-1">medium-100GB-HA-relational<span class="form-hint-2">
+                      <input id="relational-4" type="radio" name="relational" value="377.72">
+                      <label class="font-xsmall" for="relational-4">medium-100GB-HA-relational<span class="form-hint-2">
                         100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby
                       </span></label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="medium-100GB-HA-encrypted relational" data-cost="377.72">
-                      <label class="font-xsmall" for="radio-1">medium-100GB-HA-encrypted relational<span class="form-hint-2">
+                      <input id="relational-5" type="radio" name="relational" value="377.72">
+                      <label class="font-xsmall" for="relational-5">medium-100GB-HA-encrypted relational<span class="form-hint-2">
                         100GB, 500 concurrent connections, 2 vCPU, 8GB RAM, PIOPS-optimised, hot standby, encrypted
                       </span></label>
                     </div>
                     <div class="multiple-choice">
-                      <input id="radio-1" type="radio" name="radio-group" value="heavy-512GB-relational" data-cost="757.33">
-                      <label class="font-xsmall" for="radio-1">heavy-512GB-relational<span class="form-hint-2">
+                      <input id="relational-6" type="radio" name="relational" value="757.33">
+                      <label class="font-xsmall" for="relational-6">heavy-512GB-relational<span class="form-hint-2">
                       512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised.</span>
                     </label>
                   </div>
                   <div class="multiple-choice">
-                    <input id="radio-1" type="radio" name="radio-group" value="heavy-512GB-relational-HA" data-cost="1514.66">
-                    <label class="font-xsmall" for="radio-1">heavy-512GB-relational-HA<span class="form-hint-2">
+                    <input id="relational-7" type="radio" name="relational" value="1514.66">
+                    <label class="font-xsmall" for="relational-7">heavy-512GB-relational-HA<span class="form-hint-2">
                       512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby
                     </span>
                   </label>
                 </div>
                 <div class="multiple-choice">
-                  <input id="radio-1" type="radio" name="radio-group" value="heavy-512GB-HA-encrypted" data-cost="1514.66">
-                  <label class="font-xsmall" for="radio-1">heavy-512GB-HA-encrypted<span class="form-hint-2">
+                  <input id="relational-8" type="radio" name="relational" value="1514.66">
+                  <label class="font-xsmall" for="relational-8">heavy-512GB-HA-encrypted<span class="form-hint-2">
                     512GB, 5000 concurrent connections, High network performance, 8 vCPU, 32GB RAM, PIOPS-optimised, hot standby, encrypted
                   </span>
                 </label>
               </div>
               <div class="multiple-choice">
-                <input id="radio-1" type="radio" name="radio-group" value="ultraheavy-2TB-relational" data-cost="757.33">
-                <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational<span class="form-hint-2">
+                <input id="relational-9" type="radio" name="relational" value="757.33">
+                <label class="font-xsmall" for="relational-9">ultraheavy-2TB-relational<span class="form-hint-2">
                   2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised.
                 </span>
               </label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="radio-group" value="ultraheavy-2TB-relational-HA" data-cost="1514.66">
-              <label class="font-xsmall" for="radio-1">ultraheavy-2TB-relational-HA<span class="form-hint-2">
+              <input id="relational-10" type="radio" name="relational" value="1514.66">
+              <label class="font-xsmall" for="relational-10">ultraheavy-2TB-relational-HA<span class="form-hint-2">
                 2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby
               </span>
             </label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="ultraheavy-2TBB-HA-encrypted" data-cost="1514.66">
-            <label class="font-xsmall" for="radio-1">ultraheavy-2TBB-HA-encrypted<span class="form-hint-2">
+            <input id="relational-11" type="radio" name="relational" value="1514.66">
+            <label class="font-xsmall" for="relational-11">ultraheavy-2TBB-HA-encrypted<span class="form-hint-2">
               2TB, 5000 concurrent connections, High network performance, 8 vCPU, 64GB RAM, PIOPS-optimised, hot standby, encrypted
             </span>
           </label>
@@ -213,32 +216,32 @@ GOV.UK prototype kit
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="mongo_tiny" data-cost="45.3375">
-            <label class="font-xsmall" for="radio-1">mongo_tiny<span class="form-hint-2">
+            <input id="mongo-1" type="radio" name="mongo" value="45.3375">
+            <label class="font-xsmall" for="mongo-1">mongo_tiny<span class="form-hint-2">
             1GB Mongo instance - 2 nodes</span>
           </label>
         </div>
         <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="radio-group" value="mongo_small" data-cost="282.2625">
-          <label class="font-xsmall" for="radio-1">mongo_small<span class="form-hint-2">
+          <input id="mongo-2" type="radio" name="mongo" value="282.2625">
+          <label class="font-xsmall" for="mongo-2">mongo_small<span class="form-hint-2">
           10GB Mongo instance - 2 nodes</span>
         </label>
       </div>
       <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radio-group" value="mongo_medium" data-cost="677.1375">
-        <label class="font-xsmall" for="radio-1">mongo_medium<span class="form-hint-2">
+        <input id="mongo-3" type="radio" name="mongo" value="677.1375">
+        <label class="font-xsmall" for="mongo-3">mongo_medium<span class="form-hint-2">
         25GB Mongo instance - 3 nodes</span>
       </label>
     </div>
     <div class="multiple-choice">
-      <input id="radio-1" type="radio" name="radio-group" value="mongo_large" data-cost="1335.2625">
-      <label class="font-xsmall" for="radio-1">mongo_large<span class="form-hint-2">
+      <input id="mongo-4" type="radio" name="mongo" value="1335.2625">
+      <label class="font-xsmall" for="mongo-4">mongo_large<span class="form-hint-2">
       50GB Mongo instance - 3 nodes</span>
     </label>
   </div>
   <div class="multiple-choice">
-    <input id="radio-1" type="radio" name="radio-group" value="mongo_huge" data-cost="1993.3875">
-    <label class="font-xsmall" for="radio-1">mongo_huge<span class="form-hint-2">
+    <input id="mongo-5" type="radio" name="mongo" value="1993.3875">
+    <label class="font-xsmall" for="mongo-5">mongo_huge<span class="form-hint-2">
     75GB Mongo instance - 3 nodes</span>
   </label>
 </div>
