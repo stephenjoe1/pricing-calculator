@@ -41,7 +41,8 @@
         <h1 class="heading-large">Request a GOV.UK PaaS account</h1>
         <p>Service teams on GOV.UK PaaS own and use an account called an ‘organisation’. 
                     </p>
-            <form action="/request-trial-your-details" class="request-trial-form">
+
+            <form action="/request-trial-redirect">
               <div class="form-group">
                 <fieldset>
                   <legend>
@@ -49,12 +50,12 @@
                     </h2>
                   </legend>
                   <div class="multiple-choice">
-                    <input id="request-trial-your-details" type="radio" name="request-trial-your-details" value="/request-trial-your-details.html">
+                    <input id="request-trial-your-details" type="radio" name="radiogroup" value="request-trial-your-details">
                     <label for="request-trial">Yes, I'm new to PaaS and want to create an organisation</label>
 
                   </div>
                   <div class="multiple-choice">
-                    <input id="request-trial-2" type="radio" name="request-trial-2" value="/request-trial-2.html">
+                    <input id="request-trial-2" type="radio" name="radiogroup" value="request-trial-2">
                     <label for="request-trial-2">No, I'd like to join an existing organisation</label>
                   </div>
                 </fieldset>
@@ -63,6 +64,7 @@
                 <input class="button" type="submit" value="Continue">
               </div>
             </form>
+
         </div>
     </div>
 </div>
