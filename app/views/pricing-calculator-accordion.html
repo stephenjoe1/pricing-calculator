@@ -400,7 +400,7 @@ GOV.UK prototype kit
 </div>
 
 
-<div class="app-c-accordion__section js-section" id="general-hospital-school-censuses" data-track-count="accordionSection">
+<div class="app-c-accordion__section js-section logit" id="general-hospital-school-censuses" data-track-count="accordionSection">
   <div class="app-c-accordion__header js-toggle-panel">
     <h2 class="app-c-accordion__title js-section-title">
       Logging: Logit instance
@@ -420,8 +420,8 @@ GOV.UK prototype kit
           </thead>
           <tbody>
             <tr>
-              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
-              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 daily-log-volume" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
+              <td ><input name="form-control-3-4" type="text" class="form-control form-control-3-4 retention" id="form-control-3-4" value="{{ data['payment-title'] }}"></td>
             </tr>
           </tbody>
         </table>
@@ -432,20 +432,20 @@ GOV.UK prototype kit
           </legend>
 
           <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-            <label class="font-xsmall" for="radio-1">Basic<span class="form-hint-2">
+            <input id="logit-plan-1" type="radio" name="logit-plan" value="basic">
+            <label class="font-xsmall" for="logit-plan-1">Basic<span class="form-hint-2">
             Single managed ELK stack, Email login, 24/7 monitoring, Alerting, Versioned configuration, Stack version management, Email support</span>
           </label>
         </div>
         <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-          <label class="font-xsmall" for="radio-1">Pro<span class="form-hint-2">
+          <input id="logit-plan-2" type="radio" name="logit-plan" value="pro">
+          <label class="font-xsmall" for="logit-plan-2">Pro<span class="form-hint-2">
           High availability managed ELK stack with autoscaling and overage protection. Unlimited stacks and users. Single sign-on (SSO) using LDAP, AD & SAML. 2FA. RBAC. Prioritised email support and livechat.</span>
         </label>
       </div>
       <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-        <label class="font-xsmall" for="radio-1">Enterprise(SLA-99.9%)<span class="form-hint-2">
+        <input id="logit-plan-3" type="radio" name="logit-plan" value="enterprise">
+        <label class="font-xsmall" for="logit-plan-3">Enterprise(SLA-99.9%)<span class="form-hint-2">
           As Pro, but with SLAs and 99.99% availability. Only available once PaaS combined monthly bill > 10K/month</span>
         </label>
       </div>
