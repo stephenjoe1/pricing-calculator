@@ -14,4 +14,8 @@ $(document).ready(function () {
     $("input[type=radio][name=redis]").change(function (e) {
         console.log("redis: £" + parseFloat($("input[type=radio][name=redis]:checked").val()))
     })
+
+    $("input[type=radio][name=rabbitmq]").change(function (e) {
+        console.log("rabbitmq: £" + parseFloat($("input[type=radio][name=rabbitmq]:checked").val()))
+    })
 })
