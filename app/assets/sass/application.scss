@@ -597,6 +597,8 @@ tr.clickable-row:hover {
   @include bold-24;
 }
 
+::-webkit-details-marker { display:none; }
+
 // removes extra dotted outline from buttons in Firefox
 // on focus (standard yellow outline unaffected)
 @mixin firefox-remove-second-button-outline {
