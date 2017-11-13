@@ -1,0 +1,90 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+ 
+    <div class="column-two-thirds">
+
+    <div class="back">
+			<a href="/dashboard" class="link-back">Back to dashboard</a>
+	</div>
+
+      <h1 class="heading-large"><span class="heading-secondary">Organisation</span>
+            GDS-Design</h1>
+    </div>
+  </div>
+	
+	<div class="grid-row">
+		<div class="column-one-third">
+
+		  		<h2 class="heading-medium staff-subheading">
+					Team members
+				</h2>
+		</div>
+		<div class="column-one-third">
+				<a href="/invite-team-members">
+					<input class="button invite-button" type="submit" value="Invite a team member">
+				</a>
+		</div>
+	</div>
+
+	<div class="grid-row">
+ 
+    <div class="column-two-thirds">
+
+		<div>
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers (2)</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+			
+			<table style="margin-top:30px;">
+				<tbody>	
+		      		<tr>
+		      			<td class="permissions-type">Space developers (5)</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Alison Wilson</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Richard Pardy</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Maria O'Toole</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Martin Lynch</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Trina Nunez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	</div>
+	
+
+</main>
+
+
+
+{% endblock %}
