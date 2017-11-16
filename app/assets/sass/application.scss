@@ -496,9 +496,39 @@ tr.clickable-row:hover {
   padding: 5px;
   margin-left: 0px;
   margin-right: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-top: 15px;
 }
+
+.space-section-box {
+  border: 10px solid #DEE0E2;
+  background-color: #F8F8F8;
+  padding: 0px 15px 15px 15px;
+  box-sizing: border-box;
+  min-height: 200px;
+  margin-bottom: 30px;
+}
+
+table img {
+  max-height: 25px;
+}
+
+a .space-section-box {
+  color: $text-colour;
+}
+
+a .space-section-box:hover {
+  background-color: white;
+}
+
+a .space-section-box h3 {
+  color: $link-colour;
+}
+
+a .space-section-box h3:hover {
+  color: $link-hover-colour;
+}
+
 
 //end-sticky
 
