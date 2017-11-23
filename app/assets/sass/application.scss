@@ -491,8 +491,8 @@ tr.clickable-row:hover {
 }
 
 .download-section {
-  border: 10px solid #DEE0E2;
-  background-color: #F8F8F8;
+  border: 10px solid $panel-colour;
+  background-color: $highlight-colour;
   padding: 5px;
   margin-left: 0px;
   margin-right: 0px;
@@ -505,8 +505,21 @@ tr.clickable-row:hover {
   background-color: #F8F8F8;
   padding: 0px 15px 15px 15px;
   box-sizing: border-box;
-  min-height: 200px;
-  margin-bottom: 30px;
+  min-height: 150px;
+  margin-bottom: 0px;
+}
+
+.app-section-box {
+  border: 10px solid #DEE0E2;
+  background-color: #F8F8F8;
+  padding: 0px 15px 15px 15px;
+  box-sizing: border-box;
+  min-height: 80px;
+  margin-bottom: 10px;
+}
+
+.app-section-box p {
+  margin-top: 20px;
 }
 
 table img {
@@ -526,6 +539,23 @@ a .space-section-box h3 {
 }
 
 a .space-section-box h3:hover {
+  color: $link-hover-colour;
+}
+
+
+a .app-section-box {
+  color: $text-colour;
+}
+
+a .app-section-box:hover {
+  background-color: white;
+}
+
+a .app-section-box h3 {
+  color: $link-colour;
+}
+
+a .app-section-box h3:hover {
   color: $link-hover-colour;
 }
 
