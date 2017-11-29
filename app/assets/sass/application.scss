@@ -136,8 +136,50 @@ padding-left: 0px;
 
 //extras1 end
 
+.edit-name {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+
+.memory-quota {
+  
+}
+
+//status
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: #00823B;
+}
+.grey {
+  background-color: #BFC1C3;
+}
+
+.sphere {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.quota {
+  border-top: 1px solid $panel-colour;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+//
+
 .service-name img {
-  height: 20px;
+  height: 15px;
   margin-right: 8px;
 }
 

@@ -10,9 +10,7 @@
 
 <main id="content" role="main">
 
-<div class="grid-row"> 
-  {% include "includes/utility-navigation.html" %} 
-  </div>
+
 
   <div class="grid-row">
       <div class="column-two-thirds">
@@ -28,10 +26,12 @@
 
     <div class="column-full">
       <h1 class="heading-large">
-            Organisation overview</h1>
+            <span class="heading-secondary">Organisation overview</span> GDS-Design</h1>
       </div>
-
       <div class="column-full">
+        <div class="panel-memory">
+          <p>Org memory quota: 25GB <span class="edit-name"><a href="#">Increase quota</a></span></p>
+        </div>
       <h2 class="heading-medium">This organisation has 3 spaces</h2>
       </div>
 
@@ -41,10 +41,12 @@
         <div class="space-section-box">
           <h3 class="heading-small">Production</h3>
           <p class="font-xsmall">The space has 8 apps</p>
-          <!-- <ul class="list-bullet font-xsmall">
-            <li>Homepage</li>
-            <li>Support forms</li>
-          </ul> -->
+          <ul class="font-xsmall">
+            <li><div class="sphere green"></div>8 running</li>
+            <li><div class="sphere grey"></div>0 stopped</li>
+            <li><div class="sphere grey"></div>0 crashed</li>
+            <li class="quota">45% of org memory quota</li>
+          </ul>
           </div>
         </div>
       </a>
@@ -53,11 +55,12 @@
         <div class="space-section-box">
           <h3 class="heading-small">Integration</h3>
           <p class="font-xsmall">The space has 6 apps</p>
-          <!-- <ul class="list-bullet font-xsmall">
-            <li>Homepage</li>
-            <li>Testing A/B</li>
-            <li>Support forms</li>
-          </ul> -->
+          <ul class="font-xsmall">
+            <li><div class="sphere green"></div>6 running</li>
+            <li><div class="sphere grey"></div>0 stopped</li>
+            <li><div class="sphere grey"></div>0 crashed</li>
+            <li class="quota">25% of org memory quota</li>
+          </ul>
           </div>
         </div>
       </a>
@@ -66,10 +69,12 @@
         <div class="space-section-box">
           <h3 class="heading-small">Staging</h3>
           <p class="font-xsmall">The space has 6 apps</p>
-          <!-- <ul class="list-bullet font-xsmall">
-            <li>Homepage</li>
-            <li>Support forms</li>
-          </ul> -->
+          <ul class="font-xsmall">
+            <li><div class="sphere green"></div>5 running</li>
+            <li><div class="sphere grey"></div>0 stopped</li>
+            <li><div class="sphere red"></div>1 crashed</li>
+            <li class="quota">25% of org memory quota</li>
+          </ul>
           </div>
         </div>
       </a>
