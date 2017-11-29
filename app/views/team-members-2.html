@@ -9,42 +9,337 @@
 
 
 <main id="content" role="main">
-  <div class="grid-row">
- 
-    <div class="column-two-thirds">
 
-    <div class="back">
-			<a href="/dashboard" class="link-back">Back to dashboard</a>
-	</div>
-
-      <h1 class="heading-large"><span class="heading-secondary">Organisation</span>
-            GDS-Design</h1>
-    </div>
+<div class="grid-row"> 
+  {% include "includes/utility-navigation.html" %} 
   </div>
-	
-	<div class="grid-row">
-		<div class="column-one-third">
 
-		  		<h2 class="heading-medium staff-subheading">
-					Team members
-				</h2>
-		</div>
-		<div class="column-one-third">
-				<a href="/invite-team-members">
-					<input class="button invite-button" type="submit" value="Invite a team member">
-				</a>
+	<div class="grid-row">
+	    <div class="column-two-thirds">
+			<div class="back">
+				<a href="/dashboard" class="link-back">Back to organisation overview</a>
+			</div>
 		</div>
 	</div>
 
-	<div class="grid-row">
- 
-    <div class="column-two-thirds">
 
-		<div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large"><!-- <span class="heading-secondary">GDS-Design</span> -->
+            Team members</h1>
+    </div>
+	<div class="column-one-third" style="margin-top:30px;">
+		<a href="/invite-team-members">
+			<input class="button invite-button" type="submit" value="Invite a team member">
+		</a>
+	</div>	
+</div>
+
+<div class="grid-row">
+<div class="column-full">
+<h2 class="heading-medium staff-subheading">People with organisation level roles</h2>
+<details>
+  <summary><span class="summary">What these roles are</span></summary>
+  <div class="panel panel-border-narrow">
+    <p>
+      Billing manager
+    </p>
+    <p>
+      Org manager
+    </p>
+    <p>
+      Org auditor
+    </p>
+  </div>
+</details>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th class="numeric" scope="col">Billing manager</th>
+      <th class="numeric" scope="col">Org manager</th>
+      <th class="numeric" scope="col">Org auditor</th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Alice Smith</td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">John Adams</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Melissa Johannson</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Luke O'Sullivan</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+<div class="grid-row" style="margin-top:60px;">
+<div class="column-two-thirds">
+<h2 class="heading-medium staff-subheading">People with space level roles</h2>
+<details>
+  <summary><span class="summary">What these roles are</span></summary>
+  <div class="panel panel-border-narrow">
+    <p>
+      Org manager
+    </p>
+    <p>
+      Org manager
+    </p>
+    <p>
+      Org auditor
+    </p>
+  </div>
+</details>
+
+<h2 class="heading-medium staff-subheading">Space: Production</h2>
+<p>You can add other people in your organisation to this space by clicking on their profile and editing their permissions.</p>
+</div>
+<div class="column-full">
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th class="numeric" scope="col">Space manager</th>
+      <th class="numeric" scope="col">Space developer</th>
+      <th class="numeric" scope="col">Space auditor</th>
+      <td class="numeric"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Alice Smith</td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">John Adams</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Melissa Johannson</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Luke O'Sullivan</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Amy Smith</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Arnold Jacob-Hanlon</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Paul Giggs</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+<div class="grid-row" style="margin-top:60px;">
+<div class="column-full">
+<h2 class="heading-medium staff-subheading">Space: Integration</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th class="numeric" scope="col">Space manager</th>
+      <th class="numeric" scope="col">Space developer</th>
+      <th class="numeric" scope="col">Space auditor</th>
+      <td class="numeric"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Alice Smith</td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">John Adams</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Melissa Johannson</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Luke O'Sullivan</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Amy Smith</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Arnold Jacob-Hanlon</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Paul Giggs</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+<div class="grid-row" style="margin-top:60px;">
+<div class="column-full">
+<h2 class="heading-medium staff-subheading">Space: Staging</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th class="numeric" scope="col">Space manager</th>
+      <th class="numeric" scope="col">Space developer</th>
+      <th class="numeric" scope="col">Space auditor</th>
+      <td class="numeric"></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Alice Smith</td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">John Adams</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Melissa Johannson</td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Luke O'Sullivan</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Amy Smith</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Arnold Jacob-Hanlon</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+    <tr>
+      <td scope="row">Paul Giggs</td>
+      <td class="numeric"></td>
+      <td class="numeric"></td>
+      <td class="numeric"><img src="public/images/tick.png"></td>
+      <td class="numeric"><a href="">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="column-one-third">
 		    <table>
 		      	<tbody>
 		      		<tr>
-		      			<td class="permissions-type">Org managers (2)</td>
+		      			<td class="permissions-type">Billing managers</td>
 		      		</tr>
 			      	<tr class="clickable-row" data-href="team-member-detail">
 			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
@@ -54,34 +349,206 @@
 			      	</tr>
 				</tbody>
 			</table>
-			
-			<table style="margin-top:30px;">
-				<tbody>	
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
 		      		<tr>
-		      			<td class="permissions-type">Space developers (5)</td>
+		      			<td class="permissions-type">Org managers</td>
 		      		</tr>
 			      	<tr class="clickable-row" data-href="team-member-detail">
-			      		<td><a href="/team-member-detail">Alison Wilson</a></td>
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
 			      	</tr>
 			      	<tr class="clickable-row" data-href="team-member-detail">
-			      		<td><a href="/team-member-detail">Richard Pardy</a></td>
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
 			      	</tr>
 			      	<tr class="clickable-row" data-href="team-member-detail">
-			      		<td><a href="/team-member-detail">Maria O'Toole</a></td>
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
 			      	</tr>
 			      	<tr class="clickable-row" data-href="team-member-detail">
-			      		<td><a href="/team-member-detail">Martin Lynch</a></td>
-			      	</tr>
-			      	<tr class="clickable-row" data-href="team-member-detail">
-			      		<td><a href="/team-member-detail">Trina Nunez</a></td>
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
 			      	</tr>
 				</tbody>
 			</table>
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
 
-		</div>
+<h2 class="heading-medium staff-subheading">Space users: Production</h2>
+
+<div class="grid-row">
+    <div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Billing managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
 	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
 	</div>
-	
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
+
+<h2 class="heading-medium staff-subheading">Space users: Integration</h2>
+
+<div class="grid-row">
+    <div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Billing managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+</div>
+
+<h2 class="heading-medium staff-subheading">Space users: Staging</h2>
+
+<div class="grid-row">
+    <div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Billing managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div>
+	<div class="column-one-third">
+		    <table>
+		      	<tbody>
+		      		<tr>
+		      			<td class="permissions-type">Org managers</td>
+		      		</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">John Smith (you)</a></td>
+			      	</tr>
+			      	<tr class="clickable-row" data-href="team-member-detail">
+			      		<td><a href="/team-member-detail">Lois Gonzalez</a></td>
+			      	</tr>
+				</tbody>
+			</table>
+	</div> -->
+
 
 </main>
 

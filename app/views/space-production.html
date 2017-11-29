@@ -10,6 +10,10 @@
 
 <main id="content" role="main">
 
+<div class="grid-row"> 
+  {% include "includes/utility-navigation.html" %} 
+  </div>
+
 
   <div class="grid-row">
       <div class="column-two-thirds">
@@ -28,7 +32,7 @@
       </div>
 
       <div class="column-full">
-      <h2 class="heading-medium">This Space contains 6 apps</h2>
+      <h2 class="heading-medium">This space contains 6 apps</h2>
       </div>
 
 
@@ -36,7 +40,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">web-frontend</h3>
             </div>
            <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -51,7 +55,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">pricing-calculator</h3>
             </div>
             <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -66,7 +70,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">contact-form</h3>
             </div>
             <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -81,7 +85,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">product-pages</h3>
             </div>
             <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -96,7 +100,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">support-pages</h3>
             </div>
             <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -111,7 +115,7 @@
         <div class="column-full">
         <div class="app-section-box">
             <div class="column-one-third">
-              <h3 class="heading-small">Web frontend</h3>
+              <h3 class="heading-small">technical-docs</h3>
             </div>
             <div class="column-one-third">
               <p class="font-xsmall">Allocated memory: 128 MB</p>
@@ -128,23 +132,78 @@
 
 
 <div class="grid-row">
-<div class="column-full">
-      <h2 class="heading-medium">This space has 12 collaborators</h2>
-      </div>
-    <div class="column-half">
-        <h2 class="heading-small"><a href ="/team-members">Manage team members</a></h2>
-        <p>As an ‘org manager’  you can manage team members in your organiation.</p>
+    <div class="column-full">
+      <h2 class="heading-medium">This space has 5 collaborators</h2>
     </div>
-    <!-- <div class="column-one-third">
-        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk/#quick-setup-guide">Deploy your first app</a></h2>
-        <p>View documentation on deploying your first app using PaaS.</p>
-    </div>
-    <div class="column-one-third">
-        <h2 class="heading-small"><a href ="#">Steps to go live</a></h2>
-        <p>View the steps you need to take to go live on GOV.UK PaaS</p>
-    </div> -->
 </div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <p>To add other collaborators to this space go to the <a href="team-members">team members list</a>. You can add new team members or edit existing team member roles to become collaborators on this space.</p>
+    <p>To edit an existing collaborators role go to their profile below.</p>
+  </div>
+<div class="column-full">
+<details style="margin-bottom:30px;" >
+  <summary><span class="summary">Space level role descriptions</span></summary>
+  <div class="panel panel-border-narrow">
+    <h3 class="heading-small">Space manager</h3>
+    <p>
+      Space manager
+    </p>
+    <h3 class="heading-small">Space developer</h3>
+    <p>
+      Space developer
+    </p>
+    <h3 class="heading-small">Space auditor</h3>
+    <p>
+      Space auditor
+    </p>
+  </div>
+</details>
 
+<table class="member-table">
+  <thead>
+    <tr>
+      <th scope="col" style="width:280px;">Name</th>
+      <th scope="col">Space manager</th>
+      <th scope="col">Space developer</th>
+      <th scope="col">Space auditor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"><a href="team-member-detail">John Smith</a></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Maya Alberto Sanchez</a></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Tony Rudd</a></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Martha Jones</a></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Martin Torrance</a></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
 </main>
 
 {% endblock %}

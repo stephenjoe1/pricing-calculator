@@ -10,6 +10,10 @@
 
 <main id="content" role="main">
 
+<div class="grid-row"> 
+  {% include "includes/utility-navigation.html" %} 
+  </div>
+
 	<div class="grid-row">
 	    <div class="column-two-thirds">
 			<div class="back">
@@ -21,58 +25,169 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large"><span class="heading-secondary">GDS-Design</span>
+      <h1 class="heading-large"><!-- <span class="heading-secondary">GDS-Design</span> -->
             Team members</h1>
     </div>
-	<div class="column-one-third" style="margin-top:60px;">
+	<div class="column-one-third" style="margin-top:30px;">
 		<a href="/invite-team-members">
-			<input class="button invite-button" type="submit" value="Invite a team member">
+			<input class="button invite-button" type="submit" value="Invite a new team member">
 		</a>
 	</div>	
 </div>
 
 <div class="grid-row">
+  <div class="column-two-thirds">
+  <p class="lede">Team members can have organisation and space level roles. To edit a members role go to their profile.</p>
+  </div>
 <div class="column-full">
-<h2 class="heading-medium staff-subheading">Organisation users</h2>
+<details style="margin-bottom:30px;" >
+  <summary><span class="summary">What these roles mean</span></summary>
+  <div class="panel panel-border-narrow">
+    <h3 class="heading-small">Org billing manager</h3>
+    <p>
+      Org billing manager
+    </p>
+    <h3 class="heading-small">Org manager</h3>
+    <p>
+      Org manager
+    </p>
+    <h3 class="heading-small">Org auditor</h3>
+    <p>
+      Org auditor
+    </p>
+    <p>Go to a space to learn more about space level roles.</p>
+  </div>
+</details>
 
-<table>
+<table class="member-table">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th class="numeric" scope="col">Billing manager</th>
-      <th class="numeric" scope="col">Org manager</th>
-      <th class="numeric" scope="col">Org author</th>
-      <th class="numeric" scope="col"></th>
+      <th scope="col" style="width:280px;">Name</th>
+      <th scope="col">Org billing manager</th>
+      <th scope="col">Org manager</th>
+      <th scope="col">Org auditor</th>
+      <th scope="col">Spaces a member of</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">Alice Smith</td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><a href="">Edit</a></td>
+      <td scope="row"><a href="team-member-detail">John Smith</a></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">Production</span></a>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
     </tr>
     <tr>
-      <td scope="row">John Adams</td>
-      <td class="numeric"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><a href="">Edit</a></td>
+      <td scope="row"><a href="team-member-detail">Alice Lawton</a></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
     </tr>
     <tr>
-      <td scope="row">Melissa Johannson</td>
-      <td class="numeric"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><a href="">Edit</a></td>
+      <td scope="row"><a href="team-member-detail">Roberto Mancini</a></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td><img src="public/images/tick.png"></td>
+      <td>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
     </tr>
     <tr>
-      <td scope="row">Luke O'Sullivan</td>
-      <td class="numeric"></td>
-      <td class="numeric"></td>
-      <td class="numeric"><img src="public/images/tick.png"></td>
-      <td class="numeric"><a href="">Edit</a></td>
+      <td scope="row"><a href="team-member-detail">Maya Alberto Sanchez</a></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">Production</span></a>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Paula Monaghan</a></td>
+      <td></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td class="font-xsmall">None</td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Susan Murphy</a></td>
+      <td></td>
+      <td></td>
+      <td><img src="public/images/tick.png"></td>
+      <td class="font-xsmall">None</td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Tony Rudd</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">Production</span></a>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Martha Jones</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">Production</span></a>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Martin Torrance</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">Production</span></a>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Rebecca Williams</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Lawson Townsend</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href="team-member-detail">Peter Alexander</a></td>
+      <td class="font-xsmall">No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="integration-tag">Integration</span></a>
+          <a href="space-production"><span class="staging-tag">Staging</span></a>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -80,16 +195,35 @@
 </div>
 
 
-<div class="grid-row" style="margin-top:60px;">
+<!-- <div class="grid-row" style="margin-top:60px;">
+<div class="column-two-thirds">
+<h2 class="heading-medium staff-subheading">People with space level roles</h2>
+<details>
+  <summary><span class="summary">What these roles are</span></summary>
+  <div class="panel panel-border-narrow">
+    <p>
+      Org manager
+    </p>
+    <p>
+      Org manager
+    </p>
+    <p>
+      Org auditor
+    </p>
+  </div>
+</details>
+
+<h2 class="heading-medium staff-subheading">Space: Production</h2>
+<p>You can add other people in your organisation to this space by clicking on their profile and editing their permissions.</p>
+</div>
 <div class="column-full">
-<h2 class="heading-medium staff-subheading">Space users — Production</h2>
 <table>
   <thead>
     <tr>
       <th scope="col">Name</th>
       <th class="numeric" scope="col">Space manager</th>
       <th class="numeric" scope="col">Space developer</th>
-      <th class="numeric" scope="col">Space author</th>
+      <th class="numeric" scope="col">Space auditor</th>
       <td class="numeric"></td>
     </tr>
   </thead>
@@ -153,14 +287,14 @@
 
 <div class="grid-row" style="margin-top:60px;">
 <div class="column-full">
-<h2 class="heading-medium staff-subheading">Space users — Integration</h2>
+<h2 class="heading-medium staff-subheading">Space: Integration</h2>
 <table>
   <thead>
     <tr>
       <th scope="col">Name</th>
       <th class="numeric" scope="col">Space manager</th>
       <th class="numeric" scope="col">Space developer</th>
-      <th class="numeric" scope="col">Space author</th>
+      <th class="numeric" scope="col">Space auditor</th>
       <td class="numeric"></td>
     </tr>
   </thead>
@@ -222,14 +356,14 @@
 
 <div class="grid-row" style="margin-top:60px;">
 <div class="column-full">
-<h2 class="heading-medium staff-subheading">Space users — Staging</h2>
+<h2 class="heading-medium staff-subheading">Space: Staging</h2>
 <table>
   <thead>
     <tr>
       <th scope="col">Name</th>
       <th class="numeric" scope="col">Space manager</th>
       <th class="numeric" scope="col">Space developer</th>
-      <th class="numeric" scope="col">Space author</th>
+      <th class="numeric" scope="col">Space auditor</th>
       <td class="numeric"></td>
     </tr>
   </thead>
@@ -288,7 +422,7 @@
 </div>
 </div>
 
-
+ -->
 
 
 
