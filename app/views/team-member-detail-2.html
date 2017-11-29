@@ -16,25 +16,46 @@
 	<div class="column-two-thirds">
 	<div class="back">
 		<a href="/team-members" class="link-back">See all team members</a>
-	</div>		
-        <h1 class="heading-large">Invite a new team member</h1>
-             <div class="form-group">
-              <label class="form-label" for="full-name">
-                Full name</label>
-              <input class="form-control" id="full-name" type="text" name="full-name" style="width: 100%;">
-            </div>
+	</div>
+		
+		<h1 class="heading-large underline">
+		<span class="heading-secondary">Team member</span>
+		John Smith<!-- <a href="#" class="edit-details-link">
+                    Edit name</a> --></h1>
 
-            <div class="form-group" style="margin-bottom:60px;">
-              <label class="form-label" for="email-address">
-                Email address <span class="form-hint">Must be from a government organisation</span>
-              </label>
-              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
-            </div>      
+
+		<table class="member-table">
+		  	<tbody>
+		  		<tr>
+		      		<th></th>
+		      		<th></th>
+		      		<th></th>
+		      	</tr>
+		      	<tr>
+		      		<td>Email:</td>
+		      		<td>john.smith@email.gov.uk</td>
+		      		<td><!-- <a href="#" class="edit-details-link">Edit email</a> --></td>
+		      		
+		      	</tr>
+		      	<tr>
+					<td>Start date:</td>
+					<td>8 Sep 2016 – 11:14:22</td>
+					<td></td>					
+				</tr>
+				<tr>
+					<td>Last active:</td>
+					<td>28 Sep 2016 – 10:44:16</td>
+					<td></td>
+					
+				</tr>
+			</tbody>
+		</table>
 
 <h2 class="heading-large">
-		Set org and space roles</h2>
+		Org and space roles</h2>
+    <p class="edit-style-save" style="float:right; margin-top:25px"><a href="team-member-detail">Save role changes</a></p>
 <h2 class="heading-medium">
-    Organisation roles</h2>
+		Organisation roles</h2>
 
 <details>
   <summary><span class="summary">Org level role descriptions</span></summary>
@@ -87,7 +108,7 @@
 
 
 <h2 class="heading-medium">
-    Space roles</h2>
+		Space roles</h2>
 
 <details>
   <summary><span class="summary">Space level role descriptions</span></summary>
@@ -166,16 +187,12 @@
  </table>
 
 
-    <br />
-    
-    <div class="form-group" style="margin-top:30px;">
-              <a href="#"><input class="button" type="submit" value="Send invitation"></a>
-    </div>
-    <p class="remove-link">
-      <a href="#">Cancel</a>
-    </p>
+		<br />
+		<p class="remove-link">
+			<a href="/team-member-remove">Remove user</a>
+		</p>
 
-  </div>
+	</div>
 
 </div>
 </main>
