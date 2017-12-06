@@ -10,10 +10,6 @@
 
 <main id="content" role="main">
 
-<div class="grid-row"> 
-  {% include "includes/utility-navigation.html" %} 
-  </div>
-
   <!-- <div class="grid-row">
       <div class="column-two-thirds">
       <div class="back">
@@ -26,15 +22,29 @@
 
   <div class="grid-row">
 
-    <div class="column-full">
+    <div class="column-two-thirds">
       <h1 class="heading-large">
-            <span class="heading-secondary">Organisation overview</span> GDS-Design</h1>
+            <span class="heading-secondary">Organisation</span> GDS-Design</h1>
       </div>
-      <div class="column-full">
-        <div class="panel-memory">
-          <p>Org memory quota: 25GB <span class="edit-name"><a href="#">Increase quota</a></span></p>
-        </div>
+    <div class="column-one-third memory-playback">
+    <!-- <h2 class="heading-small">Memory</h2> -->
+      <table>
+        <tbody>
+          <tr>
+            <td class="bold-small">Org memory quota:</td>
+            <td>25GB</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Amount allocated:</td>
+            <td>45%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
+    <div class="grid-row">
+      <div class="column-full">
       <h2 class="heading-medium">This organisation has 3 spaces</h2>
        <details style="margin-bottom:15px; font-size: 16px;">
           <summary role="button" aria-controls="details-content-1" aria-expanded="false">What are spaces?</summary>
@@ -53,9 +63,9 @@
           <p class="font-xsmall">The space has 8 apps</p>
           <ul class="font-xsmall">
             <li><div class="sphere green"></div>7 running</li>
-            <li><div class="sphere grey"></div>0 stopped</li>
-            <li><div class="sphere red"></div>1 crashed</li>
-            <li class="quota">45% of org memory quota</li>
+            <li><div class="sphere grey"></div>1 stopped</li>
+            <!-- <li><div class="sphere red"></div>1 crashed</li> -->
+            <li class="quota">Space memory allocated: 2GB</li>
           </ul>
           </div>
         </div>
@@ -68,8 +78,8 @@
           <ul class="font-xsmall">
             <li><div class="sphere green"></div>6 running</li>
             <li><div class="sphere grey"></div>0 stopped</li>
-            <li><div class="sphere grey"></div>0 crashed</li>
-            <li class="quota">25% of org memory quota</li>
+            <!-- <li><div class="sphere grey"></div>0 crashed</li> -->
+            <li class="quota">Space memory allocated: 1.6GB</li>
           </ul>
           </div>
         </div>
@@ -81,9 +91,9 @@
           <p class="font-xsmall">The space has 6 apps</p>
           <ul class="font-xsmall">
             <li><div class="sphere green"></div>5 running</li>
-            <li><div class="sphere grey"></div>0 stopped</li>
-            <li><div class="sphere red"></div>1 crashed</li>
-            <li class="quota">25% of org memory quota</li>
+            <li><div class="sphere grey"></div>1 stopped</li>
+            <!-- <li><div class="sphere red"></div>1 crashed</li> -->
+            <li class="quota">Space memory allocated: 1.6GB</li>
           </ul>
           </div>
         </div>
@@ -121,17 +131,41 @@
 
 <div class="grid-row">
   <div class="column-full">
-  <div class="line-above">
+    <div class="line-above">
       </div>
-      <h2 class="heading-medium">Other items</h2>
+      <h2 class="heading-medium">Latest deployment</h2>
 
   </div>
-    <div class="column-half">
+    <!-- <div class="column-half">
         <h2 class="heading-small"><a href="">Marketplace</a></h2>
         <p>Get started with our free marketplace services. Upgrade select plans to gain access to premium service plans.</p>
+    </div> -->
+
+    <div class="column-half" style="margin-top:10px;">
+      <table>
+        <tbody>
+          <tr>
+            <td class="bold-small">Space:</td>
+            <td>Production</td>
+          </tr>
+          <tr>
+            <td class="bold-small">App:</td>
+            <td>web-frontend</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Deployed by:</td>
+            <td>John Smith</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Time:</td>
+            <td>14 Dec 17 – 16:23</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
     <div class="column-half">
-        <h2 class="heading-small"><a href="">Recent activity</a></h2>
+        <h2 class="heading-small"><a href="">See All activity</a></h2>
         <p>See an audit trail of all deploy logs and changes to your org spaces and applications.</p>
     </div>
 </div>
