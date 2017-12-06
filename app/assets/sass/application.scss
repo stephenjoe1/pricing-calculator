@@ -221,6 +221,10 @@ code {
   background-color: #ffe6e6;
 }
 
+.app-stopped {
+  background-color: #F8F8F8;
+}
+
 //status
 
 .red {
@@ -856,7 +860,7 @@ tr.clickable-row:hover {
   padding: 0px 15px 15px 15px;
   box-sizing: border-box;
   min-height: 120px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
 
 .app-section-box {

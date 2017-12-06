@@ -14,7 +14,7 @@
   {% include "includes/utility-navigation.html" %} 
   </div>
 
-  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <!-- <nav class="breadcrumbs" aria-label="Breadcrumbs">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList">
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <a href="dashboard" itemprop="item"><span itemprop="name">GDS-Design overview</span></a>
@@ -23,22 +23,22 @@
       <a href="#" itemprop="item"><span itemprop="name">Production</span></a>
     </li>
   </ol>
-</nav>
+</nav> -->
 
 
-<!--   <div class="grid-row">
+  <div class="grid-row">
       <div class="column-two-thirds">
       <div class="back">
-        <a href="/dashboard" class="link-back">Back to organisation overview</a>
+        <a href="/dashboard" class="link-back">Organisation overview</a>
       </div>
     </div>
-  </div> -->
+  </div>
 
 
   <div class="grid-row">
 
     <div class="column-full">
-      <h1 class="heading-large"><span class="heading-secondary">Space overview</span>
+      <h1 class="heading-large"><span class="heading-secondary">Space</span>
             Production</h1>
       </div>
 
@@ -190,12 +190,12 @@
       <td>Running</td>
       <td>15 Nov 16 — 10:36</td>
     </tr>
-    <tr class="app-crash">
+    <tr class="app-stopped">
       <td scope="row"><a href="app-web-frontend">product-pages</a></td>
       <td>2</td>
       <td>128 mb</td>
       <td>256 mb</td>
-      <td><div class="sphere red"></div>Crashed</td>
+      <td><div class="sphere grey"></div>Stopped</td>
       <td>9 Nov 16 — 17:31</td>
     </tr>
     <tr>
@@ -243,12 +243,8 @@
     </div>
 </div>
 <div class="grid-row">
-  <div class="column-two-thirds">
-    <p>To add other collaborators to this space go to the <a href="team-members">team members list</a>. You can add new team members or edit existing team member roles to become collaborators on this space.</p>
-    <p>To edit an existing collaborators role go to their profile below.</p>
-  </div>
 <div class="column-full">
-<details style="margin-bottom:30px;" >
+<details style="margin-bottom:30px; font-size:16px;" >
   <summary><span class="summary">Space level role descriptions</span></summary>
   <div class="panel panel-border-narrow">
     <h3 class="heading-small">Space manager</h3>
@@ -315,6 +311,10 @@
   </tbody>
 </table>
 </div>
+<div class="column-two-thirds" style="padding-top:30px;">
+    <p>To add other collaborators to this space go to the <a href="team-members">team members list</a>. You can add new team members or edit existing team member roles to become collaborators on this space.</p>
+    <p>To edit an existing collaborators role go to their profile.</p>
+  </div>
 </div>
 </main>
 
