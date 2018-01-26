@@ -553,6 +553,9 @@ code {
 td a {
   text-decoration: none;
 }
+.button-secondary{
+   @include button($grey-3);
+ }
 
 //end
 
