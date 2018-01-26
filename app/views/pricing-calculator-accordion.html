@@ -490,7 +490,7 @@ GOV.UK prototype kit
 
 <details class="details-summary">
 
-  <summary><span class="summary" style="font-size:24px; text-decoration:none; font-weight:700">+ Add another environment</span></summary>
+  <summary><span class="summary" style="font-size:24px; font-weight:700;">Add another environment</span></summary>
 
    <div class="panel panel-border-narrow">
 
@@ -542,20 +542,6 @@ GOV.UK prototype kit
             </h2>
           </div>
         </div>
-        <div class="app-c-accordion__section js-section memory-usage" id="general-information-and-guidance" data-track-count="accordionSection">
-          <div class="app-c-accordion__header js-toggle-panel">
-            <h2 class="app-c-accordion__title js-section-title">
-              Message queue: RabbitMQ
-            </h2>
-          </div>
-        </div>
-        <div class="app-c-accordion__section js-section memory-usage" id="general-information-and-guidance" data-track-count="accordionSection">
-          <div class="app-c-accordion__header js-toggle-panel">
-            <h2 class="app-c-accordion__title js-section-title">
-              Logging: Logit instance
-            </h2>
-          </div>
-        </div>
 
     </div>
   </div>
@@ -563,7 +549,7 @@ GOV.UK prototype kit
 
 <details>
 
-  <summary><span class="summary" style="font-size:24px; text-decoration:none; font-weight:700">+ Add another environment</span></summary>
+  <summary><span class="summary summary-big" style="font-size:24px; font-weight:700;"> Add another environment</span></summary>
 
    <div class="panel panel-border-narrow">
 
@@ -615,20 +601,6 @@ GOV.UK prototype kit
             </h2>
           </div>
         </div>
-        <div class="app-c-accordion__section js-section memory-usage" id="general-information-and-guidance" data-track-count="accordionSection">
-          <div class="app-c-accordion__header js-toggle-panel">
-            <h2 class="app-c-accordion__title js-section-title">
-              Message queue: RabbitMQ
-            </h2>
-          </div>
-        </div>
-        <div class="app-c-accordion__section js-section memory-usage" id="general-information-and-guidance" data-track-count="accordionSection">
-          <div class="app-c-accordion__header js-toggle-panel">
-            <h2 class="app-c-accordion__title js-section-title">
-              Logging: Logit instance
-            </h2>
-          </div>
-        </div>
 
     </div>
   </div>
@@ -644,8 +616,11 @@ GOV.UK prototype kit
 
 
 <div class="form-group">
-  <input style="margin-top:30px;" class="button button-secondary" type="submit" value="Copy link to this cost estimate">
-  <p style="margin-top:10px;">You can then send the cost estimate link to someone else</p>
+  <!-- <input style="margin-top:30px;" class="button button-secondary" type="submit" value="Copy link to this cost estimate"> -->
+
+  <button class="button-secondary" style="margin-top:30px;"><img src="/public/images/link-icon-1.svg">Copy link to this cost estimate</button>
+
+  <p style="margin-top:10px;">You can then share the link with someone else</p>
   <p class="cancel-link"><a href="/pricing-calculator-accordion">Clear calculator</a></p>
 </div>
 
@@ -672,7 +647,7 @@ GOV.UK prototype kit
         <p class="font-xsmall">
           This estimate assumes constant usage at the levels you've provided. Final figures will vary as CPU/Postgres/ MySQL are charged based on hourly consumption and exchange rates will fluctuate.
         </p>
-        <p class="font-xsmall">The cost estimate is dated: 26.01.2017 – 15:23. Estimates may change over time.</p>
+        <p class="font-xsmall">This cost estimate is dated: 26.01.2017 – 15:23. Estimates are liable to change over time.</p>
       </div>
     </details>
   </div>
@@ -682,7 +657,7 @@ GOV.UK prototype kit
 
 <div class="grid-row">
     <div class="column-full">
-      <h3 class="heading-medium">Other things you can do</h3>
+      <h3 class="heading-medium" style="margin-top:10px;">Other things you can do</h3>
         <p><a href="/request-trial-choose">Request a free trial account</a></p>
         <p><a href="/support" target="_blank">Read more about SLAs</a></p>
     </div>
