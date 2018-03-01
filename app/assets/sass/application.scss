@@ -245,14 +245,36 @@ code {
   vertical-align: middle;
   position: relative;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 4px;
   margin-bottom: 5px;
 }
 
 .quota {
-  border-top: 1px solid $panel-colour;
-  margin-top: 20px;
+  // border-top: 1px solid $panel-colour;
+  margin-top: 10px;
   padding-top: 10px;
+}
+
+.app-info {
+  display: inline-block;
+}
+
+.app-info li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.app-info-box {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.space-name-box {
+  margin-top: 15px;
+}
+
+.heading-space-name {
+  margin-top: -15px;
 }
 
 //
@@ -880,8 +902,8 @@ tr.clickable-row:hover {
   background-color: #F8F8F8;
   padding: 0px 15px 15px 15px;
   box-sizing: border-box;
-  min-height: 120px;
-  margin-bottom: 30px;
+  min-height: 100px;
+  margin-bottom: 10px;
 }
 
 .app-section-box {
