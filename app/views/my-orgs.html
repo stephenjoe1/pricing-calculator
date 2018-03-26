@@ -11,30 +11,39 @@
 <main id="content" role="main">
   <div class="grid-row">
         <div class="column-full">
-          <h1 class="heading-large">Welcome to GOV.UK PaaS</h1>
-                      <h2 class="heading-medium">Choose an organisation</h2>
+          <h1 class="heading-large">You’re a member of 4 organisations</h1>
+                      <h2 class="lede">Choose an organisation</h2>
         </div>
         <a href="dashboard">
-            <div class="column-half">
+            <div class="column-two-thirds">
             <div class="org-section-box">
-                  <h3 class="heading-medium" style="margin-top:15px;">Organisation A</h3>
-                  <ul class="list-bullet font-xsmall">
-                      <li>View spaces and apps</li>
-                      <li>View memory quotas</li>
-                      <li>Manage team members</li>
-                  </ul>
+                  <h3 class="heading-medium">Organisation A</h3>
             </div>
             </div>
         </a>
         <a href="dashboard">
-            <div class="column-half">
+            <div class="column-two-thirds">
             <div class="org-section-box">
-                  <h3 class="heading-medium" style="margin-top:15px;">Organisation B</h3>
-                  <ul class="list-bullet font-xsmall">
+                  <h3 class="heading-medium">Department for Organisation</h3>
+                  <!-- <ul class="list-bullet font-xsmall">
                       <li>View spaces and apps</li>
                       <li>View memory quotas</li>
                       <li>View team members</li>
-                  </ul>
+                  </ul> -->
+            </div>
+            </div>
+        </a>
+        <a href="dashboard">
+            <div class="column-two-thirds">
+            <div class="org-section-box">
+                  <h3 class="heading-medium">Another org</h3>
+            </div>
+            </div>
+        </a>
+        <a href="dashboard">
+            <div class="column-two-thirds">
+            <div class="org-section-box">
+                  <h3 class="heading-medium">XYZ department</h3>
             </div>
             </div>
         </a>
@@ -56,37 +65,52 @@
 
 <div class="grid-row">
     <div class="column-two-thirds">
-      <div class="panel panel-border-wide" style="margin-top:30px;"">
-          <p>You’ll need to <a href="https://www.cloud.service.gov.uk/next-steps">install the Cloud Foundry command line interface</a> to deploy and run your applications on GOV.UK PaaS</p>
-      </div>
+          <!-- <h2 class="heading-medium border-top">Using GOV.UK PaaS</h2> -->
+          <p class="lede border-top">Installing the Cloud Foundry command line will let you operate GOV.UK PaaS from your computer terminal.<p>
+    </div>
+  </div>
+
+<div class="grid-row download-section">
+    <div class="column-two-thirds">
+        <h2 class="heading-small">Download the Cloud Foundry command line tool</h2>
+        <p>You’ll need to do this to operate GOV.UK PaaS from your terminal. You can download the cf command line tool using one of the installation options or by visiting the <a href ="https://github.com/cloudfoundry/cli#downloads">github page</a>.</p>
+    </div>
+    <div class="column-one-third">
+        <p class="heading-small">Installation options: </p>
+        <ul class="list-bullet">
+        <li><a href ="">Mac OS X 64 bit</a></li>
+        <li><a href ="">Windows 64 bit</a></li>
+        <li><a href ="">Linux 64 bit</a></li>
+        </ul>
     </div>
 </div>
-
 <div class="grid-row">
     <div class="column-full">
-      <h2 class="heading-medium">Using GOV.UK PaaS</h2>
+      <h2 class="heading-medium">Once you’ve installed the cf CLI</h2>
     </div>
-    <div class="column-two-thirds">
-      <h3 class="heading-small"><a href ="https://docs.cloud.service.gov.uk">View the documentation</a></h3>
-      <p>Look at our technical documentation to understand how to manage and scale applications on GOV.UK PaaS, and get more information on logging, monitoring and troubleshooting.</p>
+    <div class="column-one-third">
+        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk/#quick-setup-guide">Deploy your first application</a></h2>
+        <p>View our quick setup guide on deploying your first app to GOV.UK PaaS.</p>
+    </div>
+    <div class="column-one-third">
+        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk/#managing-users">View and manage team members</a></h2>
+        <p>If you are an ‘org manager’ you can administer team members. Learn how to do this using the command line tool.</p>
+    </div>
+    <div class="column-one-third">
+        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk">View all documentation</a></h2>
+        <p>Our documentation covers all aspects of using GOV.UK PaaS, from managing and scaling your applications to troubleshooting.</p>
     </div>
 </div>
 <div class="grid-row">
     <div class="column-one-third">
-        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk/#deploying-apps">Deploy and run apps</a></h2>
-        <p>Learn how to deploy and run your app using the standard and custom buildpacks or Docker images (experimental).</p>
+        <h2 class="heading-small"><a href ="/onboarding">See steps to going live</a></h2>
+        <p>See an overview of the steps your service needs to take to go live on GOV.UK PaaS.</p>
     </div>
-
-    <div class="column-one-third">
-        <h2 class="heading-small"><a href ="https://docs.cloud.service.gov.uk/#deploy-a-backing-or-routing-service">Set up backing services</a></h2>
-        <p>Understand how to set up and connect services such as a database, an email delivery service or a monitoring system.</p>
-    </div>
-
+    
     <div class="column-one-third">
         <h2 class="heading-small"><a href ="/pricing-calculator-accordion">Get a cost estimation</a></h2>
-        <p>The price you pay for GOV.UK PaaS depends on the resources utilised by your apps. Use our calculator to browse the plans available and estimate how much they’ll cost you.</p>
+        <p>Use our calculator to estimate how much it will cost your service to use GOV.UK PaaS.</p>
     </div>
-
 </div>
 
 

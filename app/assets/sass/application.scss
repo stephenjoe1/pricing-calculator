@@ -916,40 +916,94 @@ tr.clickable-row:hover {
 }
 
 .org-section-box {
-  border: 10px solid $link-colour;
-  background-color: $link-colour;
-  padding: 0px 15px 15px 15px;
-  box-sizing: border-box;
-  min-height: 80px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  border-top: 1px solid $border-colour;
+  padding: 30px 0px 0px 0px;
 }
 
-.org-section-box p {
-  color: #ffffff;
+.org-section-box h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-a .org-section-box {
-  color: #ffffff;
+.border-top {
+  border-top: 1px solid $border-colour;
+  margin-top: 30px;
+  padding-top: 45px;
 }
 
-p .org-section-box {
-  color: #ffffff;
+// .org-section-box p {
+//   color: #ffffff;
+// }
+
+// a .org-section-box {
+//   color: #ffffff;
+// }
+
+// p .org-section-box {
+//   color: #ffffff;
+// }
+
+// a .org-section-box:hover {
+//   background-color: $link-hover-colour;
+//   border: 10px solid $link-hover-colour;
+// }
+
+// a .org-section-box h3 {
+//   color: #FFFFFF;
+//   text-decoration: none;
+// }
+
+// a .org-section-box h3:hover {
+//   color: #ffffff;
+//   text-decoration: none;
+// }
+
+//tabs
+
+// Tabs on API Key and dashboard pages
+
+ul.tabs {
+  padding: 0px;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
 }
 
-a .org-section-box:hover {
-  background-color: $link-hover-colour;
-  border: 10px solid $link-hover-colour;
-}
-
-a .org-section-box h3 {
-  color: #FFFFFF;
+.tabs a, .tabs a:visited, .tabs a:hover, .tabs a:active {
+  color: inherit;
   text-decoration: none;
 }
 
-a .org-section-box h3:hover {
-  color: #ffffff;
-  text-decoration: none;
+ul.tabs li {
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 10px 40px;
+  background: none;
+  color: #005ea5;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: -1px;
 }
+
+ul.tabs li.current {
+  color: black;
+  border: 1px solid #ccc;
+  border-bottom: hidden;
+  background-color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+//ends
+
+//end-tabs
 
 .app-section-box p {
   margin-top: 20px;
