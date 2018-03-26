@@ -1,0 +1,160 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+ 
+{% block content %}
+
+
+
+<main id="content" role="main">
+
+<div class="grid-row"> 
+  {% include "includes/utility-navigation-overview-2.html" %} 
+  </div>
+
+ 
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+            You have access to 2 spaces</h1>
+
+    <div class="info-box">
+      <p>You don’t have permission to access all spaces in this organisation. Contact your org manager if you need access to other spaces.</p>
+    </div>
+    </div>
+  </div>
+
+    <div class="grid-row">
+      <div class="column-full" style="margin-top:30px;">
+       <details style="margin-bottom:15px; font-size: 16px;">
+          <summary role="button" aria-controls="details-content-1" aria-expanded="false">What are spaces?</summary>
+          <div class="text secondary-info_content" id="details-content-1" aria-hidden="true">
+            <p>Each organisation is divided into one or more spaces, which are used to organise app development, deployment, and maintenance.</p>
+            <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
+          </div>
+        </details>
+      </div>
+       <a href="space-production">
+        <div class="column-full">
+        <div class="space-section-box">
+        <div class="column-one-third">
+          <p class="font-xsmall space-name-box">Space name:</p>
+          <h3 class="heading-medium heading-space-name">staging</h3>
+        </div>
+        <div class="column-one-third">
+          <p class="font-xsmall app-info-box ">The space has 9 apps:</p>
+          <ul class="font-xsmall app-info">
+            <li><div class="sphere green"></div>8 running</li>
+            <li><div class="sphere grey"></div>1 stopped</li>
+          </ul>
+        </div>
+        <div class="column-one-third">
+          <p class="font-xsmall app-info-box ">Space memory allocated:</p>
+          <ul class="font-xsmall app-info">
+            <li>6gb</li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      </a>
+       <a href="space-production">
+        <div class="column-full">
+        <div class="space-section-box">
+        <div class="column-one-third">
+          <p class="font-xsmall space-name-box">Space name:</p>
+          <h3 class="heading-medium heading-space-name">sandbox</h3>
+        </div>
+        <div class="column-one-third">
+          <p class="font-xsmall app-info-box ">The space has 12 apps:</p>
+          <ul class="font-xsmall app-info">
+            <li><div class="sphere green"></div>9 running</li>
+            <li><div class="sphere grey"></div>3 stopped</li>
+          </ul>
+        </div>
+        <div class="column-one-third">
+          <p class="font-xsmall app-info-box ">Space memory allocated:</p>
+          <ul class="font-xsmall app-info">
+            <li>4gb</li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      </a>
+    </div>
+
+
+
+<!-- <div class="grid-row">
+<div class="column-full">
+      <h2 class="heading-large">This organisation has 12 members</h2>
+      </div>
+    <div class="column-half">
+        <h3 class="heading-small">There are 6 org managers</h3>
+        <ul class="app-details">
+        <li class="font-xsmall"><a href="team-member-detail">john.smith@digital.cabinet-office.gov.uk</a></li>
+        <li class="font-xsmall"><a href="team-member-detail">alice.lawton@digital.cabinet-office.gov.uk</a></li>
+        <li class="font-xsmall"><a href="team-member-detail">tom.jones@digital.cabinet-office.gov.uk (you)</a></li>
+        <li class="font-xsmall"><a href="team-member-detail">william.smith@digital.cabinet-office.gov.uk</a></li>
+        <li class="font-xsmall"><a href="team-member-detail">judith.wilson-collins@digital.cabinet-office.gov.uk</a></li>
+        <li class="font-xsmall"><a href="team-member-detail">mark.lyons@digital.cabinet-office.gov.uk</a></li>
+        </ul>
+        <details style="margin-top:20px; font-size: 16px;">
+          <summary role="button" aria-controls="details-content-1" aria-expanded="false">What are org managers?</summary>
+          <div class="text secondary-info_content" id="details-content-1" aria-hidden="true">
+            <p>An org manager administers user roles.</p>
+            <p><a href="#">Read more about different roles</a></p>
+          </div>
+        </details>
+    </div>
+    <div class="column-half">
+        <h2 class="heading-small"><a href ="/team-members">View and manage org members</a></h2>
+        <p>As an ‘org manager’  you can manage team members in your organiation.</p>
+    </div>
+</div> -->
+
+<!-- <div class="grid-row">
+  <div class="column-full">
+    <div class="line-above">
+      </div>
+      <h2 class="heading-medium">Latest deployment</h2>
+
+  </div>
+
+    <div class="column-half" style="margin-top:10px;">
+      <table>
+        <tbody>
+          <tr>
+            <td class="bold-small">Space:</td>
+            <td>Production</td>
+          </tr>
+          <tr>
+            <td class="bold-small">App:</td>
+            <td>web-frontend</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Deployed by:</td>
+            <td>John Smith</td>
+          </tr>
+          <tr>
+            <td class="bold-small">Time:</td>
+            <td>14 Dec 17 – 16:23</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="column-half">
+        <h2 class="heading-small"><a href="">See All activity</a></h2>
+        <p>See an audit trail of all deploy logs and changes to your org spaces and applications.</p>
+    </div>
+</div> -->
+
+</main>
+
+{% endblock %}
+
+
