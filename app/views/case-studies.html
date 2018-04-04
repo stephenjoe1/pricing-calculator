@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/product-page" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Case studies</span></a>
+    </li>
+  </ol>
+</nav>
+
+<div class="container">
+  <div class="grid-row">
+
+    <div class="column-one-third">
+      <nav class="sub-navigation">
+        <ol itemscope itemtype="http://schema.org/ItemList">
+          <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="features.html" itemprop="item"><span itemprop="name">Case study 1: Digital Marketplace</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="#" itemprop="item"><span itemprop="name">Case study 2: Department for International Trade</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">Benefits to the Digital Marketplace from GOV.UK PaaS</h1>
+      <h2 class="heading-large">The service</h2>
+        <p>The Digital Marketplace is a publicly accessible and searchable database of services offered under a number of government frameworks, including G-Cloud and Digital Outcomes and Specialists. It is aimed at government departments seeking to procure cloud computing services and specialist services for digital projects.</p>
+      <h3 class="heading-medium">Scope of this case study</h3>
+        <p>Migrating to the GOV.UK PaaS has unlocked numerous benefits to the Digital Marketplace team. Deploying new software versions can now be done with zero downtime.</p> 
+        <p>The PaaS infrastructure is more flexible and scalable, allowing the Digital Marketplace service to respond to high demand more readily. Prototyping and experimentation is also easier on the PaaS. Furthermore, the abstraction of infrastructure maintenance from the Digital Marketplace team reduces the risk of downtime in the case of specialist knowledge of the custom infrastructure being unavailable internally.</p>
+      
+      <h2 class="heading-large">1. Faster deployments</h2>
+        <p>Moving the Digital Marketplace to the PaaS has allowed the team to deploy new versions of the software more easily and with zero downtime . The previous custom Amazon Web Services (AWS) infrastructure was more complex and deployments consequently took much longer to complete. Deployments are now roughly six times faster now that the app is hosted on the PaaS, taking only 5 minutes instead of 30 minutes. Data from the Digital Marketplace team indicates there are approximately 380 deployments per year, resulting in a saving of over 150 hours of deployment time.</p>
+        <div class="data panel panel-border-wide">
+        <span class="data-item bold-xxlarge">150</span>
+        <span class="data-item bold-xsmall">hours of deployment time saved annually</span>
+      </div>
+
+      <h3 class="heading-medium">Easier prototyping</h3>
+        <p>The PaaS infrastructure allows for rapid deployment of branch environments, allowing for easy prototyping and experimentation with new features. Previously to the creation of the GOV.UK PaaS, some prototyping for the Digital Marketplace had been hosted on the free tier of the Heroku commercial PaaS, which is slower and more limited than the GOV.UK PaaS free tier. This allows for smoother delivery of new features and incremental improvements to the application.</p>
+
+      <h2 class="heading-large">2. More features and backing services</h2>
+        <p>The GOV.UK PaaS has a number of useful and important backing services already in place. The Digital Marketplace team was able to improve logging using the Cloudwatch integration already in place on the PaaS. The PaaS also supports private environments which assist with troubleshooting and debugging. It is also able to scale up rapidly in case of increased demand.</p>
+
+      <h2 class="heading-large">3. Reduced risk</h2>
+        <p>The custom AWS infrastructure on which the Digital Marketplace was previously hosted had been developed over time by a number of different developers. The Digital Marketplace team uses full-stack developers rather than using specialist web operations engineers and front-end developers.</p> 
+        <p>Natural staff turnover meant that the developers who had been involved in building the custom infrastructure have moved on from the team. The custom infrastructure was relatively mature, so required little day-to-day effort from the full-stack developers. This led to a risk of downtime in the case of an incident as the current development team could potentially be lacking in familiarity with the system.</p>
+        <p>Migrating to the GOV.UK PaaS reduces this risk, as the PaaS team is dedicated to maintaining the system and has a 24 hour support arrangement in place.</p>
+    </div>
+  </div>
+</div>
+
+</main>
+
+{% endblock %}

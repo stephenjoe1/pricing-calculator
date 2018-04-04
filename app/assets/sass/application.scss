@@ -828,6 +828,17 @@ tr.clickable-row:hover {
 
 //end
 
+//case-study
+
+.case-study {
+  background-color: $highlight-colour;
+  padding: 15px 15px 15px 15px;
+  border: 1px solid $border-colour;
+}
+
+
+//end
+
 .border-top-section {
   border-top: 1px solid $border-colour;
   margin-top: 45px;
@@ -914,9 +925,9 @@ tr.clickable-row:hover {
 }
 
 .space-section-box {
-  border: 10px solid #DEE0E2;
+  border: 1px solid $border-colour;
   background-color: #F8F8F8;
-  padding: 0px 15px 15px 15px;
+  padding: 5px 15px 5px 15px;
   box-sizing: border-box;
   min-height: 100px;
   margin-bottom: 10px;
@@ -1038,7 +1049,8 @@ a .space-section-box {
 }
 
 a .space-section-box:hover {
-  background-color: white;
+  // background-color: white;
+  border: 1px solid $link-colour;
 }
 
 a .space-section-box h3 {
