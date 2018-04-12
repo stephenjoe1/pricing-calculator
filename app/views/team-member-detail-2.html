@@ -11,7 +11,7 @@
   {% include "includes/utility-navigation.html" %} 
   </div>
 
-  <nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <!-- <nav class="breadcrumbs" aria-label="Breadcrumbs">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList">
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <a href="dashboard" itemprop="item"><span itemprop="name">Organisation A overview</span></a>
@@ -23,70 +23,68 @@
       <a href="#" itemprop="item"><span itemprop="name">John Smith</span></a>
     </li>
   </ol>
-</nav>
+</nav> -->
 
 	
 <div class="grid-row">
 	<div class="column-two-thirds">
-	<!-- <div class="back">
-		<a href="/team-members" class="link-back">See all team members</a>
-	</div> -->
+	<div class="back">
+    <a href="/team-members" class="link-back">Org members list</a>
+  </div>
 		
 		<h1 class="heading-large underline">
-		<span class="heading-secondary">Team member</span>
-		John Smith<!-- <a href="#" class="edit-details-link">
+    <!-- <span class="heading-secondary">Team member profile</span> -->
+    Member profile<!-- <a href="#" class="edit-details-link">
                     Edit name</a> --></h1>
 
 
-		<table class="member-table">
-		  	<tbody>
-		  		<tr>
-		      		<th></th>
-		      		<th></th>
-		      		<th></th>
-		      	</tr>
-		      	<tr>
-		      		<td>Email:</td>
-		      		<td>john.smith@email.gov.uk</td>
-		      		<td><!-- <a href="#" class="edit-details-link">Edit email</a> --></td>
-		      		
-		      	</tr>
-		      	<tr>
-					<td>Start date:</td>
-					<td>8 Sep 2016 – 11:14:22</td>
-					<td></td>					
-				</tr>
-				<tr>
-					<td>Last active:</td>
-					<td>28 Sep 2016 – 10:44:16</td>
-					<td></td>
-					
-				</tr>
-			</tbody>
-		</table>
+    <table class="member-table">
+        <tbody>
+          <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>john.smith@government.gov.uk</td>
+              <td><!-- <a href="#" class="edit-details-link">Edit email</a> --></td>
+              
+            </tr>
+            <tr>
+          <td>Start date:</td>
+          <td>8 Sep 2016 – 11:14:22</td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td>Last active:</td>
+          <td>28 Sep 2016 – 10:44:16</td>
+          <td></td>
+          
+        </tr>
+      </tbody>
+    </table>
 
-<h2 class="heading-large">
-		Org and space roles</h2>
     <p class="edit-style-save" style="float:right; margin-top:25px"><a href="team-member-detail">Save role changes</a></p>
 <h2 class="heading-medium">
 		Organisation roles</h2>
 
-<details>
-  <summary><span class="summary">Org level role descriptions</span></summary>
+<details style="margin-bottom:30px;" >
+  <summary><span class="summary">Which tasks can they perform?</span></summary>
   <div class="panel panel-border-narrow">
-    <h3 class="heading-small">Org billing manager</h3>
-    <p>
-      Org billing manager
-    </p>
     <h3 class="heading-small">Org manager</h3>
     <p>
-      Org manager
+      A superuser who can create and delete spaces within an org, and administer user roles, both within the org and its spaces. We recommend to have at least two org managers.
     </p>
     <h3 class="heading-small">Org auditor</h3>
     <p>
-      Org auditor
+      A user who can view quota allocation and user roles across the org. Auditors can't change any of these configurations.
     </p>
-    <p>Go to a space to learn more about space level roles.</p>
+    <h3 class="heading-small">Org billing manager</h3>
+    <p>
+      A user who can see billing, costs and quota information.
+    </p>
+    <p class="bold-small">Tasks related to spaces are associated with space-level roles.</p>
   </div>
 </details>
 
@@ -103,7 +101,7 @@
   </thead>
   <tbody>
     <tr>
-      <td class="heading-small">Organisation A</td>
+      <td class="heading-small">Ministry of Space Innovation</td>
       <td><div class="multiple-choice">
                           <input id="manager-checkbox-0" name="invites[0]person_is_manager" type="checkbox" value="true">
                           <label for="manager-checkbox-0">&nbsp;</label>
@@ -125,19 +123,19 @@
 		Space roles</h2>
 
 <details>
-  <summary><span class="summary">Space level role descriptions</span></summary>
+  <summary><span class="summary">Which tasks can they perform?</span></summary>
   <div class="panel panel-border-narrow">
     <h3 class="heading-small">Space manager</h3>
     <p>
-      Space manager
+      A superuser who manages the space and its users.
     </p>
     <h3 class="heading-small">Space developer</h3>
     <p>
-      Space developer
+      A user who can deploy, run and manage apps, instantiate backing services and bind them to apps.
     </p>
     <h3 class="heading-small">Space auditor</h3>
     <p>
-      Space auditor
+      A user who can view apps, users and resources used within the space.
     </p>
   </div>
 </details>
