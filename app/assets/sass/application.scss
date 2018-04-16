@@ -1028,6 +1028,14 @@ ul.tabs li.current {
   display: inherit;
 }
 
+.tab-counter {
+  background-color: $link-colour;
+  color: #fff;
+  padding: 2px 7px 0px 6px;
+  border-radius: 2px;
+  margin-left: 5px;
+}
+
 //ends
 
 //end-tabs
