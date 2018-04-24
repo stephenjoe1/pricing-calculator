@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Get support - GOV.UK PaaS
+{% endblock %}
+
+{% block content %}
+
+ 
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/product-page" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
+    </li>
+  </ol>
+</nav>
+
+<div class="container">
+
+  <div class="grid-row">
+        <div class="column-two-thirds">
+        <div class="link-back">
+          <a href="/support.html">Back</a>
+        </div>
+
+        <h1 class="heading-large">Something’s wrong</h1>
+        <div class="panel panel-border-wide">
+          <p>If you have a critical issue, start by checking the <a href="https://status.cloud.service.gov.uk/">system status page</a>: if it’s a known issue with the platform, it will show there and we’ll keep our users updated on the progression of the incident.</p>
+        </div>
+
+
+        <!-- <h2 class="heading-large">Contact us</h2> -->
+
+            <div class="form-group">
+              <label class="form-label" for="email-address">
+                Your email address
+              </label>
+              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dep-name">
+                Your organisation’s name
+              </label>
+              <input class="form-control" id="dep-name" type="text" name="dep-name" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="full-name">
+                The name of the space affected
+              </label>
+              <input class="form-control" id="full-name" type="text" name="full-name" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-small">How severely is this impacting your service?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                  <label for="radio-1">Users can’t access the live service</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                  <label for="radio-2">Users are experiencing a degraded live service</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                  <label for="radio-3">Users can’t access a testing environment</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                  <label for="radio-3">Dev work is blocked</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                  <label for="radio-3">Other</label>
+                </div>
+
+              </fieldset>
+            </div>
+
+
+
+            <div class="form-group">
+              <label class="form-label" for="your-message">
+                Tell us a bit more about the issue
+              </label>
+              <textarea class="form-control" name="textarea" id="textarea" style="width: 100%;" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+              <a href="/request-trial-success-2.html"><input class="button" type="submit" value="Submit"></a>
+            </div>
+         
+
+
+
+
+
+
+
+
+          <h2 class="heading-medium">How to troubleshoot</h2>
+            <p>If your app is crashing or not deploying, and the CLI messages aren’t making clear why, you might get more information with the platform troubleshooting features.</p>
+            <p>You can <a href="https://docs.cloud.service.gov.uk/#logs">consult the app logs</a>. If the output is hard to read try <a href="https://docs.cloud.service.gov.uk/#cf-events-command">checking the app events</a>.</p>
+            <p>Our documentation also contains a step-by-step guide for troubleshooting by <a href="https://docs.cloud.service.gov.uk/#connecting-with-ssh">connecting to your app</a> and <a href="https://docs.cloud.service.gov.uk/#creating-tcp-tunnels-with-ssh">creating a tunnel</a> with SSH.</p>
+
+<!-- -> [successful response page]
+We’ve received your request
+During working hours our response time to issues that impact services ranges between 20 minutes and 2 hours. 
+We deal with the most critical issues first.
+Outside of working hours we support critical incidents only, and we aim to start working on the issue within 40 minutes.
+If the issue is not impacting your service, we aim to start working your request within 1 business day. 
+Read more about our support model and response times. -->
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
