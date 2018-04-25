@@ -36,12 +36,34 @@
           <h2 class="heading-medium">Adding or removing users to spaces</h2>
           <p>Org managers can <a href="https://docs.cloud.service.gov.uk/#user-lifecycle">add or remove existing users</a> from a space using the CLI.</p> 
           <h2 class="heading-medium">Adding or removing users from your org</h2>
-          <p>Get in contact with us to:</p>
+          <!-- <p>Get in contact with us to:</p>
             <ul class="list list-bullet">
               <li>create a new account</li>
               <li>set up a CI or a Bot account</li>
               <li>delete an existing account</li>
-            </ul>
+            </ul> -->
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-small">What do you want to do?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                  <label for="radio-1">Create a new account</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                  <label for="radio-2">Set up a CI or a Bot account</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                  <label for="radio-3">Delete an existing account</label>
+                </div>
+              </fieldset>
+            </div>
 
           <div class="form-group">
               <label class="form-label" for="full-name">
