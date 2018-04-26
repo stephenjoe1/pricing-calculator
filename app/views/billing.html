@@ -1,0 +1,258 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+
+<div class="grid-row"> 
+  {% include "includes/utility-navigation-billing.html" %} 
+  </div>
+
+	<div class="grid-row">
+     <div class="column-full">
+          <h1 class="heading-large underline underline-2">Monthly billing statement</h1>
+          <p>You can use the filters to itemise the bill</p>
+
+
+
+<div class="filter-section filter-section-customers">
+
+
+    <div class="column-quarter filter-fields">
+      <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Month
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>May 2018</option>
+              <option value="value4">April 2018</option>
+              <option value="value1">March 2018</option>
+              <option value="value5">February 2018</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="column-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Spaces
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All spaces</option>
+              <option value="value4">staging</option>
+              <option value="value1">integration</option>
+              <option value="value5">production</option>
+              <option value="value5">sandbox</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+    <div class="column-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Services and apps
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All services</option>
+              <option value="value4">April 2018</option>
+              <option value="value1">March 2018</option>
+              <option value="value5">February 2018</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+
+       <div class="column-quarter filter-fields">
+       </div>
+       <div class="column-one-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Something
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All</option>
+              <option value="value4">Active</option>
+              <option value="value1">Inactive</option>
+              <option value="value5">Pending</option>
+            </select>
+          </div>
+        </div>
+       </div>
+
+
+      <div class="column-quarter filter-fields">
+        <div class="form-group filter-button filter-button-2">
+          <button class="button filter-button filter-button-2">Filter</button>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="grid-row">
+  <div class="table-list">
+    <div class="column-full">
+          <h2 class="heading-small">
+          54 billing items for May
+        </h2>
+        <ul>
+        <li><a href="#">Download a spreadsheet of these items</a></li>
+        </ul> 
+
+          <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col">Amount</th>
+              <th scope="col">Amount (inc VAT)</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall left-padding">Total bill</td>
+                <td></td>
+                <td></td>
+                <td class="bold-xsmall">£1920.00</td>
+                <td class="bold-xsmall">£2144.80</td>
+            </tr>
+          </tbody> 
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="table-list">
+    <div class="column-full">
+         <!--  <h2 class="heading-small">
+          54 billing items for May
+        </h2>
+        <ul>
+        <li><a href="#">Download a spreadsheet of these items</a></li>
+        <ul>  -->
+
+          <table>
+          <thead>
+            <tr>
+              <th scope="col">Space</th>
+              <th scope="col">Services/apps</th>
+              <th scope="col">Time period</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Amount (inc VAT)</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall left-padding">integration</td>
+                <td></td>
+                <td></td>
+                <td class="bold-xsmall">£720.00</td>
+                <td class="bold-xsmall">£862.80</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr> 
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+
+            <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall left-padding">production</td>
+                <td></td>
+                <td></td>
+                <td class="bold-xsmall">£720.00</td>
+                <td class="bold-xsmall">£862.80</td>
+            </tr> 
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>elastic-search</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr> 
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>frontend-app</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>signin-console</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+            <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall left-padding">staging</td>
+                <td></td>
+                <td></td>
+                <td class="bold-xsmall">£720.00</td>
+                <td class="bold-xsmall">£862.80</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>staging</td>
+                <td>signin-console</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td>staging</td>
+                <td>signin-console</td>
+                <td>1 May – 12 May</td>
+                <td>£92.00</td>
+                <td>£110.40</td>
+            </tr>
+          </tbody> 
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+</main>
+
+
+
+{% endblock %}
