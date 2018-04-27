@@ -66,9 +66,10 @@
             <div class="dropdown">
               <select name="select" class="form-control dropdown-list" id="full-name">
                 <option value="value1" selected>All services</option>
-              <option value="value4">April 2018</option>
-              <option value="value1">March 2018</option>
-              <option value="value5">February 2018</option>
+              <option value="value4">Postgres heavy-512GB-relational-HA</option>
+              <option value="value1">Mongo_tiny</option>
+              <option value="value5">MySQL medium-100GB-HA-relational</option>
+              <option value="value5">web_frontend</option>
             </select>
           </div>
         </div>
@@ -80,14 +81,14 @@
        <div class="column-one-quarter filter-fields">
         <div class="form-group">
           <label class="form-label-bold form-label-bold-2" for="full-name">
-              Something
+              Plan
             </label>
             <div class="dropdown">
               <select name="select" class="form-control dropdown-list" id="full-name">
                 <option value="value1" selected>All</option>
-              <option value="value4">Active</option>
+              <!-- <option value="value4">Active</option>
               <option value="value1">Inactive</option>
-              <option value="value5">Pending</option>
+              <option value="value5">Pending</option> -->
             </select>
           </div>
         </div>
@@ -106,7 +107,7 @@
 <div class="grid-row">
   <div class="table-list">
     <div class="column-full">
-          <h2 class="heading-small">
+        <h2 class="heading-small">
           54 billing items for May
         </h2>
         <ul>
@@ -117,17 +118,13 @@
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col"></th>
               <th scope="col">Amount</th>
               <th scope="col">Amount (inc VAT)</th>
             </tr>
           </thead>
           <tbody>
              <tr class='row-leader' data-href='dd-customer-detail'>
-                <td class="bold-xsmall">TOTAL</td>
-                <td></td>
-                <td></td>
+                <td class="td-big">Overall total spend<span class="form-hint" style="font-size:16px;">Exchange rate: £1.00 to $1.39</span></td>
                 <td class="bold-xsmall">£1920.00</td>
                 <td class="bold-xsmall">£2144.80</td>
             </tr>

@@ -746,13 +746,18 @@ tr.clickable-row:hover {
   width: 20%;
 }
 
+.table-list .td-big {
+  font-size: 19px;
+  width: 60%;
+  font-weight: bold;
+}
+
 .table-list {
   margin-bottom: 30px;
 }
 
 .row-leader {
-  border-top: 2px solid #0B0C0C;
-  border-bottom: 2px solid #0B0C0C;
+  border-top: 5px solid #0B0C0C;
 }
 
 .left-padding {
