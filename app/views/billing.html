@@ -64,10 +64,10 @@
             <div class="dropdown">
               <select name="select" class="form-control dropdown-list" id="full-name">
                 <option value="value1" selected>All services</option>
-              <option value="value4">Postgres heavy-512GB-relational-HA</option>
-              <option value="value1">Mongo_tiny</option>
-              <option value="value5">MySQL medium-100GB-HA-relational</option>
-              <option value="value5">web_frontend</option>
+              <option value="value4">Postgres</option>
+              <option value="value1">Mongo</option>
+              <option value="value5">MySQL</option>
+              <option value="value5">apps</option>
             </select>
           </div>
         </div>
@@ -75,8 +75,7 @@
 
 
        <div class="column-quarter filter-fields">
-       </div>
-       <div class="column-one-quarter filter-fields">
+      <!--  <div class="column-one-quarter filter-fields">
         <div class="form-group">
           <label class="form-label-bold form-label-bold-2" for="full-name">
               Plan
@@ -84,20 +83,22 @@
             <div class="dropdown">
               <select name="select" class="form-control dropdown-list" id="full-name">
                 <option value="value1" selected>All</option>
-              <!-- <option value="value4">Active</option>
-              <option value="value1">Inactive</option>
-              <option value="value5">Pending</option> -->
             </select>
           </div>
         </div>
-       </div>
+       </div> -->
 
+       <div class="form-group filter-button filter-button-2">
+          <button class="button filter-button filter-button-2">Filter</button>
+        </div>
+    </div>
 
+<!-- 
       <div class="column-quarter filter-fields">
         <div class="form-group filter-button filter-button-2">
           <button class="button filter-button filter-button-2">Filter</button>
         </div>
-        </div>
+        </div> -->
       </div>
     </div>
 </div>
@@ -116,9 +117,9 @@
           </thead> -->
           <tbody>
              <tr class='row-leader-2' data-href='dd-customer-detail'>
-                <td class="td-big">Total cost<span class="form-hint" style="font-size:16px;">Exchange rate: £1.00 to $1.39</span></td>
-                <td style="font-size:19px;">£1920.00<span class="form-hint" style="font-size:16px;">ex VAT</span></td>
-                <td style="font-size:19px; font-weight:bold;">£2144.80<span class="form-hint" style="font-size:16px;">inc VAT at 20%</span></td>
+                <td class="td-big">Total cost for May<span class="form-hint" style="font-size:16px;">Exchange rate: £1.00 to $1.39</span></td>
+                <td class="numeric" style="font-size:19px;">£1920.00<span class="form-hint" style="font-size:16px;">ex VAT</span></td>
+                <td class="numeric" style="font-size:19px; font-weight:bold;">£2144.80<span class="form-hint" style="font-size:16px;">inc VAT at 20%</span></td>
             </tr>
           </tbody> 
       </table>
@@ -149,96 +150,88 @@
             <tr>
               <th scope="col">Space</th>
               <th scope="col">Services/apps</th>
-              <th scope="col">Time period</th>
-              <th scope="col">Amount</th>
-              <th scope="col">Amount (inc VAT)</th>
+              <th scope="col">Name</th>
+              <th class="numeric" scope="col">Amount</th>
+              <th class="numeric" scope="col">Amount (inc VAT)</th>
             </tr>
           </thead>
           <tbody>
-             <tr class='row-leader' data-href='dd-customer-detail'>
+             <!-- <tr class='row-leader' data-href='dd-customer-detail'>
                 <td class="bold-xsmall">integration</td>
                 <td></td>
                 <td></td>
-                <td class="bold-xsmall">£720.00</td>
-                <td class="bold-xsmall">£862.80</td>
-            </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td class="numeric" class="bold-xsmall">£720.00</td>
+                <td class="numeric" class="bold-xsmall">£862.80</td>
+            </tr> -->
+            <tr data-href='dd-customer-detail'>
                 <td>integration</td>
                 <td>elastic-search</td>
-                <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td>Notify thing</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr> 
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>integration</td>
                 <td>elastic-search</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>integration</td>
                 <td>elastic-search</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <trdata-href='dd-customer-detail'>
                 <td>integration</td>
                 <td>elastic-search</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-
-            <tr class='row-leader' data-href='dd-customer-detail'>
-                <td class="bold-xsmall">production</td>
-                <td></td>
-                <td></td>
-                <td class="bold-xsmall">£720.00</td>
-                <td class="bold-xsmall">£862.80</td>
-            </tr> 
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>production</td>
                 <td>elastic-search</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr> 
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>production</td>
                 <td>frontend-app</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>production</td>
                 <td>signin-console</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-            <tr class='row-leader' data-href='dd-customer-detail'>
+            <!-- <tr class='row-leader' data-href='dd-customer-detail'>
                 <td class="bold-xsmall">staging</td>
                 <td></td>
                 <td></td>
-                <td class="bold-xsmall">£720.00</td>
-                <td class="bold-xsmall">£862.80</td>
-            </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+                <td class="numeric" class="bold-xsmall">£720.00</td>
+                <td class="numeric" class="bold-xsmall">£862.80</td>
+            </tr> -->
+            <tr data-href='dd-customer-detail'>
                 <td>staging</td>
                 <td>signin-console</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
-            <tr class='clickable-row' data-href='dd-customer-detail'>
+            <tr data-href='dd-customer-detail'>
                 <td>staging</td>
                 <td>signin-console</td>
                 <td>1 May – 12 May</td>
-                <td>£92.00</td>
-                <td>£110.40</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
             </tr>
           </tbody> 
       </table>
