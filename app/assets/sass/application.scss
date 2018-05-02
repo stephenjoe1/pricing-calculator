@@ -789,6 +789,20 @@ tr.clickable-row:hover {
 .summary-table li {
 }
 
+.sort_link {
+  font-weight: 300;
+}
+
+.asc {
+  font-weight: 700;
+}
+
+.up-arrow{
+  font-size: 14px;
+  color: $link-colour;
+  margin-left: 4px;
+}
+
 //ends
 
 //utility navigation section
