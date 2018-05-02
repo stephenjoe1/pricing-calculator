@@ -766,12 +766,27 @@ tr.clickable-row:hover {
   background-color: #F8F8F8;
 }
 
+.row-leader-2 td {
+  padding-right: 10px;
+}
+
 .row-leader-2 .td-big {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .left-padding {
   padding-left: 5px;
+}
+
+.summary-table {
+  background-color: #F8F8F8;
+  padding-left: 5px;
+  padding-right: 10px;
+  width: 95%;
+  float: right;
+}
+
+.summary-table li {
 }
 
 //ends
