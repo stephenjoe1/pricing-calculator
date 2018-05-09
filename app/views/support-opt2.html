@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-2.html" %}
 
 {% block page_title %}
   Get support - GOV.UK PaaS
@@ -10,7 +10,7 @@
 
 <main id="content" role="main">
 
-<nav class="breadcrumbs" aria-label="Breadcrumbs">
+<!-- <nav class="breadcrumbs" aria-label="Breadcrumbs">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList">
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
@@ -22,34 +22,33 @@
       <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
     </li>
   </ol>
-</nav>
+</nav> -->
 
 <div class="container">
 
   <div class="grid-row">
-        <div class="column-two-thirds">
-        <div class="link-back">
-          <a href="/support.html">Back</a>
-        </div>
+        <div class="column-two-thirds" style="margin-top:30px;">
+          <div class="link-back">
+            <a href="/support-signed-in.html">Back</a>
+          </div>
 
         <h1 class="heading-large">Something’s wrong</h1>
         <div class="panel panel-border-wide">
           <p>If you have a critical issue, start by checking the <a href="https://status.cloud.service.gov.uk/">system status page</a>: if it’s a known issue with the platform, it will show there and we’ll keep our users updated on the progression of the incident.</p>
         </div>
 
-
         <!-- <h2 class="heading-large">Contact us</h2> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="form-label" for="email-address">
                 Your email address
               </label>
               <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
-            </div>
+            </div> -->
 
             <div class="form-group">
               <label class="form-label" for="dep-name">
-                Your organisation’s name
+                The name of the organisation affected
               </label>
               <input class="form-control" id="dep-name" type="text" name="dep-name" style="width: 100%;">
             </div>
@@ -101,8 +100,10 @@
               <textarea class="form-control" name="textarea" id="textarea" style="width: 100%;" rows="5"></textarea>
             </div>
 
+            <p>We’ll reply to stephen.mccarthy@digital.cabinet-office.gov.uk</p>
+
             <div class="form-group">
-              <a href="/request-trial-success-2.html"><input class="button" type="submit" value="Submit"></a>
+              <a href="/signed-in-support-success.html"><input class="button" type="submit" value="Submit"></a>
             </div>
 
 
