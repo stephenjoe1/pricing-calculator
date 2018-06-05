@@ -998,12 +998,17 @@ tr.clickable-row:hover {
 
 .payment-summary-small h2 {
   font-size: 24px;
+  line-height: 30px;
   font-weight: 700;
   padding-bottom: 10px;
 }
 
 .payment-summary-small h3 {
   font-size: 16px;
+}
+
+.remove-icon {
+  font-size: 14px;
 }
 
 .payment-info {
