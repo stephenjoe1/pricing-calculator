@@ -1,0 +1,264 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+
+<div class="grid-row"> 
+  {% include "includes/utility-navigation-billing.html" %} 
+  </div>
+
+	<div class="grid-row">
+     <div class="column-full">
+          <h1 class="heading-large underline underline-2">Monthly billing statement</h1>
+          <!-- <p>You can use the filters to itemise the bill</p> -->
+
+<div class="filter-section filter-section-customers">
+
+
+    <div class="column-quarter filter-fields">
+      <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Month
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>May 2018</option>
+              <option value="value4">April 2018</option>
+              <option value="value1">March 2018</option>
+              <option value="value5">February 2018</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="column-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Spaces
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All spaces</option>
+              <option value="value4">staging</option>
+              <option value="value1">integration</option>
+              <option value="value5">production</option>
+              <option value="value5">sandbox</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+    <div class="column-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Services and apps
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All services</option>
+              <option value="value4">Postgres</option>
+              <option value="value1">Mongo</option>
+              <option value="value5">MySQL</option>
+              <option value="value5">apps</option>
+            </select>
+          </div>
+        </div>
+    </div>
+
+
+       <div class="column-quarter filter-fields">
+      <!--  <div class="column-one-quarter filter-fields">
+        <div class="form-group">
+          <label class="form-label-bold form-label-bold-2" for="full-name">
+              Plan
+            </label>
+            <div class="dropdown">
+              <select name="select" class="form-control dropdown-list" id="full-name">
+                <option value="value1" selected>All</option>
+            </select>
+          </div>
+        </div>
+       </div> -->
+
+       <div class="form-group filter-button filter-button-2">
+          <button class="button filter-button filter-button-2">Filter</button>
+        </div>
+    </div>
+
+<!-- 
+      <div class="column-quarter filter-fields">
+        <div class="form-group filter-button filter-button-2">
+          <button class="button filter-button filter-button-2">Filter</button>
+        </div>
+        </div> -->
+      </div>
+    </div>
+</div>
+
+<div class="grid-row">
+  <div class="table-list">
+    <div class="column-full">
+
+        <table>
+          <!-- <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead> -->
+          <tbody>
+             <tr class='row-leader-2' data-href='dd-customer-detail'>
+                <td class="td-big">Total cost for May<span class="form-hint" style="font-size:16px;">Exchange rate: £1.00 to $1.39</span></td>
+                <td class="numeric" style="font-size:19px;">£1,920.00<span class="form-hint" style="font-size:16px;">ex VAT</span></td>
+                <td class="numeric" style="font-size:19px; font-weight:bold;">£2,144.80<span class="form-hint" style="font-size:16px;">inc VAT at 20%</span></td>
+            </tr>
+          </tbody> 
+      </table>
+
+      <h2 class="heading-small">
+          Cost breakdown: <span style="font-weight:300;"> 54 items in <span class="heading-small">May</span> in <span class="heading-small">staging</span> space with <span class="heading-small">elastic-search</span> service</span>
+        </h2>
+        <ul>
+        <li class="font-xsmall"><a href="#">Download a spreadsheet of these items</a></li>
+        </ul> 
+
+    </div>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="table-list">
+    <div class="column-full">
+         <!--  <h2 class="heading-small">
+          54 billing items for May
+        </h2>
+        <ul>
+        <li><a href="#">Download a spreadsheet of these items</a></li>
+        <ul>  -->
+
+          <table>
+          <thead> 
+            <tr>
+              <th role="columnheader" scope="col"><a class="sort_link asc" href="">Space</a><span class="up-arrow">▲</span></th>
+              <th role="columnheader" scope="col"><a class="sort_link" href="">Services/apps</a></th>
+              <th role="columnheader" scope="col"><a class="sort_link" href="">Name</a></th>
+              <th role="columnheader" class="numeric" scope="col">Amount</th>
+              <th role="columnheader" class="numeric" scope="col">Amount (inc VAT)</th>
+            </tr>
+          </thead>
+          <tbody>
+             <!-- <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall">integration</td>
+                <td></td>
+                <td></td>
+                <td class="numeric" class="bold-xsmall">£720.00</td>
+                <td class="numeric" class="bold-xsmall">£862.80</td>
+            </tr> -->
+            <tr data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>notify-thing</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric"><details>
+                  <summary><span class="summary">£110.40</span></summary>
+                  <div class="panel panel-border-narrow summary-table">
+                    <ul>
+                      <li>Instance 1: £50.00</li>
+                      <li>Instance 2: £60.40</li>
+                    </ul>
+                  </div>
+                </details></td>
+            </tr> 
+            <tr data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>frontend-app</td>
+                <td>integration-tool</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric"><details>
+                  <summary><span class="summary">£110.40</span></summary>
+                  <div class="panel panel-border-narrow summary-table">
+                    <ul>
+                      <li>Instance 1: £50.00</li>
+                      <li>Instance 2: £60.40</li>
+                    </ul>
+                  </div>
+                </details></td>
+            </tr>
+            <tr data-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>another-name</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+            <trdata-href='dd-customer-detail'>
+                <td>integration</td>
+                <td>elastic-search</td>
+                <td>web-frontend</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+            <tr data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>elastic-search</td>
+                <td>notify-thing</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr> 
+            <tr data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>frontend-app</td>
+                <td>another-name</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+            <tr data-href='dd-customer-detail'>
+                <td>production</td>
+                <td>signin-console</td>
+                <td>another-name</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+            <!-- <tr class='row-leader' data-href='dd-customer-detail'>
+                <td class="bold-xsmall">staging</td>
+                <td></td>
+                <td></td>
+                <td class="numeric" class="bold-xsmall">£720.00</td>
+                <td class="numeric" class="bold-xsmall">£862.80</td>
+            </tr> -->
+            <tr data-href='dd-customer-detail'>
+                <td>staging</td>
+                <td>signin-console</td>
+                <td>notify-thing</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+            <tr data-href='dd-customer-detail'>
+                <td>staging</td>
+                <td>signin-console</td>
+                <td>user-sign-in</td>
+                <td class="numeric">£92.00</td>
+                <td class="numeric">£110.40</td>
+            </tr>
+          </tbody> 
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Get support - GOV.UK PaaS
+{% endblock %}
+
+{% block content %}
+
+ 
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/product-page" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
+    </li>
+  </ol>
+</nav>
+
+<div class="container">
+
+  <div class="grid-row">
+        <div class="column-two-thirds">
+        <div class="link-back">
+          <a href="/support.html">Back</a>
+        </div>
+
+        <h1 class="heading-large">I need help with an account</h1>
+          <h2 class="heading-medium">Adding or removing users to spaces</h2>
+          <p>Org managers can <a href="https://docs.cloud.service.gov.uk/#user-lifecycle">add or remove existing users</a> from a space using the CLI.</p> 
+          <h2 class="heading-medium">Adding or removing users from your org</h2>
+          <!-- <p>Get in contact with us to:</p>
+            <ul class="list list-bullet">
+              <li>create a new account</li>
+              <li>set up a CI or a Bot account</li>
+              <li>delete an existing account</li>
+            </ul> -->
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend>
+                  <h3 class="heading-small">What do you want to do?</h3>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                  <label for="radio-1">Create a new account</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                  <label for="radio-2">Set up a CI or a Bot account</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                  <label for="radio-3">Delete an existing account</label>
+                </div>
+              </fieldset>
+            </div>
+
+          <div class="form-group">
+              <label class="form-label" for="full-name">
+                Email address <span class="form-hint">Of the user you want to add or remove</span></label>
+              <input class="form-control" id="full-name" type="text" name="full-name" style="width: 100%;">
+          </div>
+
+          <div class="form-group">
+              <label class="form-label" for="email-address">
+                Org manager’s email address <span class="form-hint">We’ll contact them to confirm before creating or removing an account</span></label>
+              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
+          </div>
+
+
+            <div class="form-group">
+              <a href="#"><input class="button" type="submit" value="Submit"></a>
+            </div>
+
+
+        <h2 class="heading-medium">Having issues logging in?</h2>
+        <p>If you tried to access GOV.UK PaaS with the wrong credentials and you’ve been locked out for too many failed attempts, wait <a href="https://docs.cloud.service.gov.uk/#failed-login-rate-limit">5 minutes for the lock to expire</a>.</p>
+        <p>In case you forgot your password, you can <a href="https://login.cloud.service.gov.uk/forgot_password">reset it here</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

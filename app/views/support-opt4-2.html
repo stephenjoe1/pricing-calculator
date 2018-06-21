@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Get support - GOV.UK PaaS
+{% endblock %}
+
+{% block content %}
+
+ 
+
+<main id="content" role="main">
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/product-page" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
+    </li>
+  </ol>
+</nav>
+
+<div class="container">
+
+  <div class="grid-row">
+        <div class="column-two-thirds">
+        <div class="link-back">
+          <a href="/support.html">Back</a>
+        </div>
+
+        <h1 class="heading-large">I’d like to talk to someone about PaaS</h1>
+
+
+            <div class="form-group">
+              <label class="form-label" for="email-address">
+                Your email address
+              </label>
+              <input class="form-control" id="email-address" type="text" name="email-address" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dep-name">
+                Your organisation’s name
+              </label>
+              <input class="form-control" id="dep-name" type="text" name="dep-name" style="width: 100%;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="your-message">
+                Tell us a bit more about what you’re trying to do
+              </label>
+              <textarea class="form-control" name="textarea" id="textarea" style="width: 100%;" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+              <a href="/request-trial-success-2.html"><input class="button" type="submit" value="Submit"></a>
+            </div>
+
+
+          <h2 class="heading-medium">Other help you can get</h2>
+            <p>We publish our guidance on how to use the platform in our <a href="https://docs.cloud.service.gov.uk">documentation</a>.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

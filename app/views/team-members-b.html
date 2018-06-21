@@ -1,0 +1,84 @@
+{% extends "layout-2.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+
+<div class="grid-row"> 
+  {% include "includes/utility-navigation-team-members-2.html" %} 
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large"><!-- <span class="heading-secondary">DIT-staging</span> -->
+            Org members</h1>
+    <div class="info-box">
+      <p>You don’t have permission to view or manage members in this organisation. Contact your org manager if you need to get your permission levels changed.</p>
+    </div>
+    </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+  <p class="lede">Members can have organisation and space level roles.</p>
+  </div>
+<div class="column-full">
+<details style="margin-bottom:30px;" >
+  <summary><span class="summary">What these roles mean</span></summary>
+  <div class="panel panel-border-narrow">
+    <h3 class="heading-small">Org billing manager</h3>
+    <p>
+      Org billing manager
+    </p>
+    <h3 class="heading-small">Org manager</h3>
+    <p>
+      Org manager
+    </p>
+    <h3 class="heading-small">Org auditor</h3>
+    <p>
+      Org auditor
+    </p>
+    <p>Go to a space to learn more about space level roles.</p>
+  </div>
+</details>
+
+<table class="member-table">
+  <thead>
+    <tr>
+      <th scope="col" style="width:280px;">Name</th>
+      <th scope="col">Org billing manager</th>
+      <th scope="col">Org manager</th>
+      <th scope="col">Org auditor</th>
+      <th scope="col">Spaces a collaborator on</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"><a href="team-member-detail">tom.jones@government.gov.uk</a> (You)</td>
+      <td>No org level role</td>
+      <td></td>
+      <td></td>
+      <td>
+          <a href="space-production"><span class="prod-tag">staging</span></a>
+          <a href="space-production"><span class="prod-tag">sandbox</span></a>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+</main>
+
+
+
+{% endblock %}

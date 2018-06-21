@@ -11,7 +11,7 @@
 <main id="content" role="main">
 
 <div class="grid-row"> 
-  {% include "includes/utility-navigation-overview.html" %} 
+  {% include "includes/utility-navigation-overview-2.html" %} 
   </div>
 
  
@@ -20,83 +20,24 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-            This organisation has 4 spaces</h1>
-      </div>
-    <div class="column-one-third memory-playback">
-    <!-- <h2 class="heading-small">Memory</h2> -->
-      <table>
-        <tbody>
-          <tr>
-            <td class="bold-small">Org memory quota:</td>
-            <td>100gb</td>
-          </tr>
-          <tr>
-            <td class="bold-small">Amount allocated:</td>
-            <td>45%</td>
-          </tr>
-        </tbody>
-      </table>
+            You have access to 2 spaces</h1>
+
+    <div class="info-box">
+      <p>You don’t have permission to access all spaces in this organisation. Contact your org manager if you need access to other spaces.</p>
+    </div>
     </div>
   </div>
 
     <div class="grid-row">
       <div class="column-full" style="margin-top:30px;">
-       <details style="margin-bottom:15px;">
+       <details style="margin-bottom:15px; font-size: 16px;">
           <summary role="button" aria-controls="details-content-1" aria-expanded="false">What are spaces?</summary>
           <div class="text secondary-info_content" id="details-content-1" aria-hidden="true">
-            <p>Each org contains at least one space – the Sandbox space is the default one. They're used to organise app development, deployment and maintenance. Org managers can create and delete spaces.</p>
+            <p>Each org contains at least one space - the Sandbox space is the default one. They're used to organise app development, deployment and maintenance. Org managers can create and delete spaces.</p>
             <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
           </div>
         </details>
       </div>
-
-      <a href="space-production">
-        <div class="column-full">
-        <div class="space-section-box">
-        <div class="column-one-third">
-          <p class="font-xsmall space-name-box">Space name:</p>
-          <h3 class="heading-medium heading-space-name">production</h3>
-        </div>
-        <div class="column-one-third">
-          <p class="font-xsmall app-info-box ">The space has 6 apps:</p>
-          <ul class="font-xsmall app-info">
-            <li><div class="sphere green"></div>5 running</li>
-            <li><div class="sphere grey"></div>1 stopped</li>
-          </ul>
-        </div>
-        <div class="column-one-third">
-          <p class="font-xsmall app-info-box ">Space memory allocated:</p>
-          <ul class="font-xsmall app-info">
-            <li>6gb</li>
-          </ul>
-        </div>
-        </div>
-        </div>
-      </a>
-
-      <a href="space-production">
-        <div class="column-full">
-        <div class="space-section-box">
-        <div class="column-one-third">
-          <p class="font-xsmall space-name-box">Space name:</p>
-          <h3 class="heading-medium heading-space-name">integration</h3>
-        </div>
-        <div class="column-one-third">
-          <p class="font-xsmall app-info-box ">The space has 9 apps:</p>
-          <ul class="font-xsmall app-info">
-            <li><div class="sphere green"></div>8 running</li>
-            <li><div class="sphere grey"></div>1 stopped</li>
-          </ul>
-        </div>
-        <div class="column-one-third">
-          <p class="font-xsmall app-info-box ">Space memory allocated:</p>
-          <ul class="font-xsmall app-info">
-            <li>6gb</li>
-          </ul>
-        </div>
-        </div>
-        </div>
-      </a>
        <a href="space-production">
         <div class="column-full">
         <div class="space-section-box">
@@ -143,40 +84,12 @@
         </div>
         </div>
       </a>
-      <!-- <a href="#">
-        <div class="column-full">
-        <div class="space-section-box">
-          <h3 class="heading-small">staging</h3>
-          <p class="font-xsmall">The space has 0 apps</p>
-          <ul class="font-xsmall">
-            <li><div class="sphere green"></div>0 running</li>
-            <li><div class="sphere grey"></div>0 stopped</li>
-            <li class="quota">Space memory allocated: 0gb</li>
-          </ul>
-          </div>
-        </div>
-      </a>
-       <a href="#">
-        <div class="column-full">
-        <div class="space-section-box">
-          <h3 class="heading-small">sandbox</h3>
-          <p class="font-xsmall">The space has 6 apps</p>
-          <ul class="font-xsmall">
-            <li><div class="sphere green"></div>5 running</li>
-            <li><div class="sphere grey"></div>1 stopped</li>
-            <li class="quota">Space memory allocated: 1.6gb</li>
-          </ul>
-          </div>
-        </div>
-      </a> -->
     </div>
 
 
 
-<div class="grid-row">
+<!-- <div class="grid-row">
 <div class="column-full">
-  <!-- <div class="line-above">
-  </div> -->
       <h2 class="heading-large">This organisation has 12 members</h2>
       </div>
     <div class="column-half">
@@ -189,31 +102,27 @@
         <li class="font-xsmall"><a href="team-member-detail">judith.wilson-collins@digital.cabinet-office.gov.uk</a></li>
         <li class="font-xsmall"><a href="team-member-detail">mark.lyons@digital.cabinet-office.gov.uk</a></li>
         </ul>
-        <details style="margin-top:20px;">
+        <details style="margin-top:20px; font-size: 16px;">
           <summary role="button" aria-controls="details-content-1" aria-expanded="false">What are org managers?</summary>
           <div class="text secondary-info_content" id="details-content-1" aria-hidden="true">
-            <p>An org manager can create and delete spaces, and administer user roles.</p>
-            <!-- <p><a href="#">Read more about different roles</a></p> -->
+            <p>An org manager administers user roles.</p>
+            <p><a href="#">Read more about different roles</a></p>
           </div>
         </details>
     </div>
     <div class="column-half">
         <h2 class="heading-small"><a href ="/team-members">View and manage org members</a></h2>
-        <p>As an org manager you can manage members in your organisation.</p>
+        <p>As an ‘org manager’  you can manage team members in your organiation.</p>
     </div>
-</div>
+</div> -->
 
-<div class="grid-row">
+<!-- <div class="grid-row">
   <div class="column-full">
     <div class="line-above">
       </div>
-      <h2 class="heading-large">Latest deployment</h2>
+      <h2 class="heading-medium">Latest deployment</h2>
 
   </div>
-    <!-- <div class="column-half">
-        <h2 class="heading-small"><a href="">Marketplace</a></h2>
-        <p>Get started with our free marketplace services. Upgrade select plans to gain access to premium service plans.</p>
-    </div> -->
 
     <div class="column-half" style="margin-top:10px;">
       <table>
@@ -239,10 +148,10 @@
     </div>
 
     <div class="column-half">
-        <h2 class="heading-small"><a href="">See all activity</a></h2>
-        <p>See a list of all deployments and changes to your spaces and applications.</p>
+        <h2 class="heading-small"><a href="">See All activity</a></h2>
+        <p>See an audit trail of all deploy logs and changes to your org spaces and applications.</p>
     </div>
-</div>
+</div> -->
 
 </main>
 
