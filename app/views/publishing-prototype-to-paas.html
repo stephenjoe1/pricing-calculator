@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Get support - GOV.UK PaaS
+{% endblock %}
+
+{% block content %}
+
+ 
+<main id="content" role="main" class="docs markdown">
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 id="publishing-on-the-web-paas" class="heading-large">Publishing on GOV.UK PaaS using the prototype kit</h1>
+
+      <p class="lede">Follow these steps to get your prototype online.</p>
+
+      <!-- <p>We recommend using <a href="https://www.cloud.service.gov.uk/">GOV.UK PaaS</a> to get your prototype online. It’s simple and fast to deploy new versions as you work.</p>
+      <p>Once your prototype is on PaaS, other people will be able to access and try your prototype from their own computers or mobile devices.</p> -->
+
+      <p class="panel">
+        We'll show how to secure your prototype in step 6 but <span class="bold-small">do not</span> enter real user data into prototypes hosted on PaaS. If your prototype stores or collects user data, talk to a security professional about appropriate security steps you must take.
+      </p>
+
+        <h2 id="1-sign-up-for-account" class="heading-medium">1) Sign up for an account</h2>
+        <p>You need to be able to log in to your account each time you want to publish a new version of a prototype.</p>
+        <p><a href="https://www.cloud.service.gov.uk/signup">Create an account</a> or move on to step 2 if you already have one.</p>
+        
+
+        <h2 id="2-install-cloud-foundry-cli" class="heading-medium">2) Install the Cloud Foundry CLI</h2>
+        <p>The PaaS is built on top Cloud Foundry. You need to install a Commandline interface (<abbr>CLI</abbr>) tool to interact with it.</p>
+        <p>There are a couple of ways to do this.</p>
+        
+        <div class="grid-row download-section">
+          <div class="column-two-thirds">
+              <h2 class="heading-small">Download the Cloud Foundry command line tool</h2>
+              <p>You’ll need to do this to operate GOV.UK PaaS from your terminal. You can download the cf command line tool using one of the installation options or by visiting the <a href ="https://github.com/cloudfoundry/cli#downloads">github page</a>.</p>
+          </div>
+          <div class="column-one-third">
+              <p class="heading-small">Installation options: </p>
+              <ul class= "list list-bullet">
+                <li>
+                  <a href="https://packages.cloudfoundry.org/stable?release=macosx64&amp;amp;source=github" class="govuk-link">Mac OS X 64 bit</a>
+                </li>
+                <li>
+                  <a href="https://packages.cloudfoundry.org/stable?release=windows64&amp;amp;source=github" class="govuk-link">Windows 64 bit</a>
+                </li>
+                <li>
+                  <a href="https://packages.cloudfoundry.org/stable?release=debian64&amp;amp;source=github" class="govuk-link">Debian 64 bit</a>
+                </li>
+                <li>
+                  <a href="https://packages.cloudfoundry.org/stable?release=redhat64&amp;amp;source=github" class="govuk-link">RedHat 64 bit</a>
+                </li>
+              </ul>
+          </div>
+      </div>
+
+
+        <p>After following your preferred method check that it has installed correctly by running</p>
+        <pre><code>cf -v</code></pre>
+
+        <p>You should get a messages like this, confirming the installed version:</p>
+        <pre><code>cf version X.X.X…</code></pre>
+
+        <p>For more information check the <a href="https://docs.cloud.service.gov.uk/#quick-setup-guide ">PaaS setup docs</a>.</p>
+
+        <h2 id="3-login-to-cloud-foundry" class="heading-medium">3) Login to Cloud Foundry</h2>
+
+        <p>Log in on the commandline by typing this</p>
+
+        <pre><code>cf login -a api.cloud.service.gov.uk -u USERNAME</code></pre>
+
+        <p>Where <span class="bold">USERNAME</span> is the email address your account was created with.</p>
+
+        <p>You’ll then be prompted to enter your password.</p>
+
+        <h2 id="4-choose-name-for-prototype" class="heading-medium">4) Choose name for prototype</h2>
+
+        <p>Locate the <code>manifest.yml</code> file in the home folder of your prototype. It should look similar to this:</p>
+
+<pre><code>---
+applications:
+- name: [NAME_OF_YOUR_APP]
+  memory: 128M</code></pre>
+
+        <p>If there isn't one, create it then copy and paste the content shown.</p>
+
+        <p>Next, replace <code>[NAME_OF_YOUR_APP]</code> with the name of your prototype. Choose a name that is unique. This name will be used in the url for your prototype.</p>
+
+        <p>For example: <code>govuk-payments-prototype</code> will create an app at: <code>govuk-payments-prototype.cloudapps.digital</code></p>
+
+        <h2 id="5-push-your-app" class="heading-medium">5) Push your app</h2>
+
+        <p>In the folder where you've been working on your prototype, run:</p>
+
+        <pre><code>cf push</code></pre>
+
+        <p>This will create what Cloud foundry calls an app if one by that name doesn't exist already. It will copy across all your prototype files.</p>
+
+        <div class="panel">You can override the name in the manifest and push to a different URL by including the new name in the <code>cf</code> command. For example: <p><pre><code>cf push [new-name-here]</code></pre></p><p>This can be useful when testing multiple versions.</p></div>
+
+        <p>It will take a few minutes to deploy. If you encounter any issues please contact the <a href="#">GOV.UK PaaS support team</a> - we want to make this easy for you!</p>
+
+        <p>Once finished you will be provided with the URL for you prototype. You'll need this after we've set up the HTTP basic auth.</p>
+
+        <p><img src="/public/images/paas_deploy_commandline.png" alt="Screeshot of commandline after successful deploy to PaaS" /></p>
+
+        <h2 id="6-set-username-and-password" class="heading-medium">6) Set a username and password</h2>
+
+        <p>To set up credentials to protect your prototype enter the following commands on the terminal.</p>
+
+        <p>For the username</p>
+        <pre><code>cf set-env [NAME_OF_YOUR_APP] USERNAME [username_here]</code></pre>
+
+        <p>For the password</p>
+        <pre><code>cf set-env [NAME_OF_YOUR_APP] PASSWORD [password_here]</code></pre>
+
+        <p>You need to restart your prototype for these changes to take effect</p>
+        <pre><code>cf restart [NAME_OF_YOUR_APP]</code></pre>
+
+        <h2 id="7-view-prototype-on-web" class="heading-large">7) View your prototype on the web</h2>
+
+        <p>After your work is deployed, you will be able to view it on the web by visiting <code>https://[NAME_OF_YOUR_APP].cloudapps.digital</code>.</p>
+
+        <p>If you are not sure what that is, or have forgotten what you called your app, you can find out all your deployed apps and their URLs by typing:</p>
+        <pre><code>cf apps</code></pre>
+
+        <h3>Further reading on PaaS</h3>
+        <ul class="text">
+          <li><a href="/docs/how-to-manage-your-space-quota.html">How to manage your space quota</a></li>
+          <li><a href="/docs/github-and-cloudfoundry.html">Github and Cloud Foundry</a></li>
+          <li><a href="/docs/collaborate-on-prototypes.html">Add other users to GOV.UK PaaS and work together on a prototype</a></li>
+          <li><a href="https://docs.cloud.service.gov.uk/#deployment-overview">Deploying apps to PaaS</a></li>
+        </ul>
+
+    </div>
+
+  </div>
+  
+</main>
+
+{% endblock %}
